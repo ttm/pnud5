@@ -1,0 +1,36 @@
+Este texto é um planejamento para a apresentacao de amanha.
+
+1) colocar no gephi o grafo. Torcer para que consigamos
+colocar as etiquetas de vertices e arestas nele.
+
+1b) Cancelado 1), tentando todos os plots do graphviz
+
+2) Caso necessário, fazer uma figura reduzida de cada grafo, e links para as figuras online, para que possam contribuir.
+
+3) Colocar os vocabulários nas páginas para ver se cabem.
+
+4) Listar fontes principais dentre as já levantadas.
+
+5) Preparar apresentação:
+
+5.0) Capa e roteiro, 2p
+
+5.1) Apresentação, 1p
+
+5.2) Conselhos, 1p
+
+5.3) skos:: prefLabel, altLabel, definition, scopeNote; owl:: label, comment
+Conceitos a mais e a menos. Relações a mais e a menos. 1p
+
+5.4) Conferências, 1p
+
+5.5) Previsões e sugestões, 1p
+
+7p+1p p agradecimentos
+
+====
+
+apresentação no ooapresentation
+
+repasso parte dos documentos das conferencias e mais detalhes
+
