@@ -72,12 +72,20 @@ Este documento descreve o quinto produto.
 
 \section{Introdução}
 \subsection{Contexto e importância da consultoria}
+descrever o objetivo GERAL da consultoria e como este Produto específico está contextualizado dentro do objetivo final da contratação
 \subsection{Contexto e importância do Produto}
 \subsubsection{Objetivos}
 \subsubsection{Resultados esperados}
 \subsubsection{Caráter inovador}
+destacar como este trabalho poderá contribuir suprir uma lacuna de conhecimento e/ou para desenvolver determinada a capacidade institucional da SG/PR.
 \section{Desenvolvimento}\label{sec:dev}
+espaço onde o consultor vai construir suas ideias. O consultor tem a liberdade para organizá-lo em tópicos, itens e sub-itens. 
+
+demonstrar que o produto entregue corresponde ao que foi solicitado no termo de referência, por meio de:
+4. Análise sobre os resultados esperados na etapa de planejamento do Produto e os resultados alcançados ao final do Produto.
+
 \subsection{Etapas de desenvolvimento anteriores a este produto}
+Descrição detalhada das etapas de desenvolvimento do Produto
 \subsubsection{Sistematização ontológica da participação online}
 Através de estudos e reuniões presenciais e online, a Ontologia de Participação Social (OPS) foi revisada~\cite{OPS} e a Ontologia do Participa.br (OPA) foi feita~\cite{OPA}.
 \subsubsection{Triplificação dos dados do participa.br}
@@ -88,10 +96,15 @@ Para uso dos dados triplificados, pode-se recorrer a diversos métodos de leitur
 Análises dos dados do participa.br foram abertas no IPython Notebook, com ênfase no texto produzido e nas redes formadas~\cite{repoProd3}.
 \subsubsection{Sistema de recomendação de participante e recursos}
 \subsection{Etapas de desenvolvimento deste produto}
-\subsection{Justificativa do método}
-\subsection{Justificativa das fontes}
-\section{Usos dos resultados}\label{sec:uso}
+\subsection{Justificativa, descrição detalhada e formas de aplicação do método}
+\subsection{Justificativa, descrição detalhada e acesso das fontes}
+\section{Resultados alcançados}
+\subsection{Usos dos resultados}\label{sec:uso}
 \section{Conclusão}
+retomar as ideias trabalhadas ao longo do Produto e fazer uma análise sobre as mesmas.
+\subsection{Comentários, sugestões, recomendações}
+\subsection{Impacto do Produto para a elaboração, gestão e/ou avaliação de políticas públicas de participação social}
+\subsection{Impacto no público-alvo das políticas públicas a que se refere}
 \section{Agradecimentos}
 O consultor Renato Fabbri agradece ao Joenio Costa pelo template em \LaTeX\ para os produtos. Agradece à Daniela Feitosa pela reunião para demanda de recomendação de perfis. Agradece aos supervisores do trabalho realizado em torno do participa.br: Ricardo Poppi e Ronald Costa. Agradece ao labMacambira.sf.net e todas as comunidades de software e cultura livre que compõe esta contribuição.
 \newpage
@@ -104,10 +117,93 @@ O consultor Renato Fabbri agradece ao Joenio Costa pelo template em \LaTeX\ para
 \newpage
 %\input{listadeanexos.tex}
 \appendix
-\section{Relatório de implementação das contribuições do Workshop dia 20/Out/2014, sobre a biblioteca (semântica de participação) social}
+\section{Ontologias de instâncias participativas online potencialmente relacionáveis ao participa.br}
+\subsection{Ontologia do AA (Ontologiaa)}\label{ap:aa}
+Como uma forma de integrar o Participa.br em uma nuvem de conhecimento participativo, foi levantada a Ontologiaa, exposta na Figura~\ref{fig:diaa}. O AA é uma técnica de compartilhamento de processos usada principalmente no labMacambira.sf.net. A simplicidade das implementações atuais, e a pertinência do registro e compartilhamento de processos, fizeram com que esta fosse o primeiro desenvolvimento efetivo deste último produto.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../figs/ontologiaa.png}
+  \caption{Ontologia do AA, com suas classes, propriedades, literais, e classes e propriedades externas usadas para relacionar os dados do AA aos do participa e de toda nuvem LOD.}\label{fig:diaa}
+\end{figure}
+
+O tamanho reduzido da ontologia permitiu que vários testes fossem feitos. Em especial, com a ontologiaa foi reestabelecida a arquitetura de ontologia com uso de um namespace interno (no caso \url{http://purl.org/socialparticipation/aa/} e inferências para contemplar outros namespaces.
+
+As inferências foram testadas com o jena/fuseki, com bons resultados. Tanto as inferências relacionadas às hiperonímias (superclasses e super propriedades, diretamente do rdfs) quanto inferências mais elaboradas (ligadas ao padrão OWL) foram satisfatórias. O revés é que qualquer query SparQL que demora milissegundos, mesmo que não envolva inferências para sua resposta, demora segundos quando há uma máquina de inferências ativa. A solução, portanto, parece ser ainda de realizar estas inferências offline e disponibilizar todas as triplas resultantes no endpoint.
+
+Todos os desenvolvimentos desta ontologia e a triplificação de dados do AA em MySQL e MongoDB estão em: \url{https://github.com/ttm/aa01/tree/master/rdf}. Estes dados estão disponíveis no endpoint sparql (fuseki/jena) para uso conforme \url{script ipython}. Há interfaces úteis para explorar/expor os dados ligados ao AA. Em especial, estão derreferenciáveis, como na Figura~\ref{fig:aashout}.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../figs/aaShoutPubby.png}
+  \caption{Mensagem (shout) do AA derreferenciado. Cada mensagem do AA recebe uma URI, assim como cada sessão e cada usuário. Estes três conceitos são instânciados com URIs dedicadas, e relacionadas via ainda outras URIs. Por fim URIs especificam relações entre instâncias destes conceitos e os dados.}\label{fig:aashout}
+\end{figure}
+
+\subsection{Ontologia do Cidade Democrática (OCD)}
+Outra instância participativa considerada prioritária pelo consultor para integração aos dados participativos linkados, e contemplada neste trabalho, foi o portal Cidade Democrática. Este portal possui grande complexidade e abundância de dados e conceitos. Assim, esta empreitada contrastou com a da Ontologiaa descrito no Apêndice~\ref{ap:aa}.
+
+Com a grande complexidade das tabelas e dados, foi feita uma decupagem do banco de dados (disponibilizada em \url{https://github.com/ttm/ocd/blob/master/decupagemBD.txt}) e uma triplificação destes dados (script em: \url{https://github.com/ttm/ocd/blob/master/triplificaCD.py} e triplas resultantes em \url{https://github.com/ttm/ocd/blob/master/cdTriplestore.rdf.tar.gz}).
+
+Embora os trabalhos de decupagem do banco e de triplificação dos dados sejam expressivos, o ponto alto desta empreitada foi a gênese de um método de levantamento de ontologia orientado aos dados. Este método é extremamente útil para qualquer portal que queira representar seus dados como triplas RDF e uma ontologia. O processo é o seguinte:
+
+\begin{enumerate}
+    \item Todos os dados de interesse são triplificados com namespace interno, conforme: \url{https://github.com/ttm/ocd/blob/master/triplificaCD.py}.
+    \item Os dados triplificados são disponibilizados em um endpoint sparql para levantamento da ontologia com base nas triplas produzidas (endpoint em: \url{http://200.144.255.210:8082/cd/query}).
+    \item Um script é construído, no qual os dados triplificados são usados para observação das estruturas ocorrentes, conforme \url{https://github.com/ttm/ocd/blob/master/OCD.py}. Principalmente:
+\begin{itemize}
+        \item São observadas todas as classes ocorrentes.
+        \item São observadas todas as propriedades ocorrentes.
+        \item São feitas imagens de cada classe e de cada propriedade, com os elementos imediatamente relacionados a eles, como nas Figuras~\ref{} e~\ref{}.
+\end{itemize}
+\end{enumerate}
+\section{Revisão da OPA}
+\section{Revisão da Triplificação do Participa.br}
+\section{Ontologia e Vocabulário da Biblioteca Social (OBS e VBS)}
+\subsection{PNPS}
+\subsection{Entrevistas}
+\subsection{Relatório de implementação das contribuições do Workshop dia 20/Out/2014, sobre a biblioteca (semântica de participação) social}
 \begin{figure}[h!]
   \centering
     \includegraphics[width=\textwidth,angle=270]{fotos/OuvidoriaLigia.jpg}
   \caption{Diagrama de Ouvidorias desenhado com o acompanhamento de especialista (Lígia).}
 \end{figure}
+\subsection{Materiais enviados pela equipe para referência}
+\section{Utilização dos dados linkados}
+As ontologias mais importantes para este trabalho precisam ser observáveis e anotáveis com facilidade por não especialistas.
+
+Uma primeira opção é aproveitar os dados/tripas disponíveis no endpoint sparql já aberto com uma instância Fuseki/Jena. Este endpoint pode ser acessado via linguagens de scripting para prototipação rápida, como JavaScript ou Python, fornecendo interfaces gráficas e web para navegação e análise. Estas possibilidades estão desenvolvidas nos produtos 2 e 3 desta mesma consultoria~\cite{prod2, prod3}.
+
+\subsection{Pubby}
+
+Com desenvolvimento recente no github \url{https://github.com/cygri/pubby}, é talvez o navegador de dados mais conhecido. Parece ser projeto do dig (grupo do Berners-Lee no MIT).
+Os testes mostraram que as consultas sparql demoravam demais para o montante de dados triplificados, portanto foram importados os rdfs. Para facilitar, o arquivo de configuração do pubby está em \url{https://github.com/ttm/vocabulario-participacao/blob/master/auxiliar/config.ttl}.
+
+A url permanente \url{http://purl.org/socialparticipation/} é redirecionada para a instância do pubby, em: \url{http://200.144.255.210:8081/tpubby/page/}. Desta forma, \emph{todos} os conceitos da VBS e classes da OBS podem ser derreferenciados, como na Figura~\ref{fig:derre}.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../figs/derre.png}
+  \caption{Derreferenciamento do conceito de Instância de participação através da URI \url{http://purl.org/socialparticipation/obs/ParticipationInstance}.}\label{fig:derre}
+\end{figure}
+
+\subsection{Endpoint SparQL}
+
+Os dados da OBS, VBS, Participabr, AA e OCD estão disponíveis via endpoint SparQL, conforme o uso explicitado nos scripts do INotebook \url{http://200.144.255.210:8003/}.
+
+\subsection{Webprotege}
+
+Permite que as ontologias e vocabulários estejam online e comentáveis.
+
+%\section{Cartas ao poder público federal}
+%\subsection{Religião e cultura livre}
+%\subsection{Autoritarismo/preconceito e rede social}
+%\subsection{Pesquisa e desenvolvimento para participação}
+%\subsection{Subsídios para pulverizar a participação e qualificá-la}
+
+%\section{Técnicas de difusão de informação}
+%\subsection{Reprodução do experimento apocalíptico de 2012}
+
+
+
+
 \end{document}
