@@ -139,6 +139,8 @@ Todos os desenvolvimentos desta ontologia e a triplificação de dados do AA em 
   \caption{Mensagem (shout) do AA derreferenciado. Cada mensagem do AA recebe uma URI, assim como cada sessão e cada usuário. Estes três conceitos são instânciados com URIs dedicadas, e relacionadas via ainda outras URIs. Por fim URIs especificam relações entre instâncias destes conceitos e os dados.}\label{fig:aashout}
 \end{figure}
 
+A ontologia do AA está no webprotege da Stanford~\url{http://webprotege.stanford.edu/#Edit:projectId=5207dd13-8706-4836-bad9-6cba1c81de29}.
+
 \subsection{Ontologia do Cidade Democrática (OCD)}
 Outra instância participativa considerada prioritária pelo consultor para integração aos dados participativos linkados, e contemplada neste trabalho, foi o portal Cidade Democrática. Este portal possui grande complexidade e abundância de dados e conceitos. Assim, esta empreitada contrastou com a da Ontologiaa descrito no Apêndice~\ref{ap:aa}.
 
@@ -153,13 +155,59 @@ Embora os trabalhos de decupagem do banco e de triplificação dos dados sejam e
 \begin{itemize}
         \item São observadas todas as classes ocorrentes.
         \item São observadas todas as propriedades ocorrentes.
-        \item São feitas imagens de cada classe e de cada propriedade, com os elementos imediatamente relacionados a eles, como nas Figuras~\ref{} e~\ref{}.
+        \item As propriedades são especificadas como funcionais e inversamente funcionais (axiomas de propriedade), conforme os dados apresentarem tais relações.
+        \item As classes recebem restrições universais e existenciais, conforme os dados apresentarem estas relações.
+        \item São feitas imagens de cada propriedade, com os elementos imediatamente relacionados a eles, como na Figura~\ref{fig:ocdp}.
+        \item São feitas imagens de cada classe, com os elementos imediatamente relacionados a eles, como na Figura~\ref{fig:ocdc}.
+        \item São feitas imagens diferentes da estrutura global, para facilitar apreensão da ontologia, como a Figura~\ref{fig:ocdg}.
+        \item Ontologia OWL é escrita, conforme disponibilizada em: \url{https://github.com/ttm/ocd/blob/master/OCD.owl} ou \url{https://github.com/ttm/ocd/blob/master/OCD.ttl}.
+        \item Os conceitos são relacionados a conceitos mais gerais, de ontologias externas, para facilitar a integração dos dados do portal com o grafo gigante e global~\cite{LOD}. Este passo não foi dado na OCD por limitação de tempo mesmo. Há outras prioridades e a comunidade deste portal está ainda absorvendo as informações e tecnologias disponibilizadas com este produto.
 \end{itemize}
 \end{enumerate}
-\section{Revisão da OPA}
+
+Esta ontologia está no Webprotege disponibilizado pela Stanford, no link: \url{http://webprotege.stanford.edu/#Edit:projectId=a6e2334c-5c32-4397-9c9a-c75c1cebb555} com todas as classes e propriedades comentáveis. Digno de nota: o detalhamento nas restrições de classes e nos axiomas de propriedade, embora usualmente não recomendados com tanta extensão para não forçar aplicação menos rígida, permitem mais inferencias. Além disso, este detalhamento melhorou bastante a navegação da estrutura, como pode-se observar no próprio webprotege.
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../figs/topic.png}
+  \caption{Figura da propriedade \texttt{ocd:topic}, fruto do método de especificação de ontologias orientado aos dados.}\label{fig:ocdp}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../figs/Observatory.png}
+  \caption{Figura da classe \texttt{ocd:Observatory}, fruto do método de especificação de ontologias orientado aos dados.}\label{fig:ocdc}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../figs/OCD_2.png}
+  \caption{Figura geral da ontologia \texttt{ocd}, fruto do método de especificação de ontologias orientado aos dados. Para facilitar visualização, visite as imagens diretamente em~\url{https://raw.githubusercontent.com/ttm/ocd/master/imgs/OCD_.png} e~\url{https://raw.githubusercontent.com/ttm/ocd/master/imgs/OCD_2.png}.}\label{fig:ocdg}
+\end{figure}
+
+
+\section{Revisão da OPa}\label{ap:opa}
+O primeiro produto desta consultoria envolveu o levantamento de uma ontologia para o Participa, batizada de OPa. Isso ocorreu antes de serem triplificados os dados do participa.br e antes até mesmo do consultor ter acesso a estes dados. Isso foi bastante proveitoso, pois obrigou a equipe do participa a conceber uma ontologia genérica para portais participativos, centrada nos conceitos de participante, portal participativo e mecanismo participativo. Estes módulos estarão preservados e constam como legado intelectual, uma contribuição da equipe do participa.br na conceituação da participação social online.
+
+Já depois de feitas estas ontologias do AA e do Cidade Democrática, e depois de ter feito toda a OBS e VBS, atingimos um paradigma apropriado para triplificação dos dados e organização conceitual. Em resumo:
+\begin{itemize}
+    \item uso de um namespace interno, como \texttt{http://purl.org/socialparticipation/opa}, para a triplificação dos dados, em todas as classes e propriedades. Isso facilita a navegacao e deixa os dados mais organizados, pois no caso extremo de compatibilidade com alguma classe externa, a classe interna assinala a fonte da instância. Um caso extremo desta pertinência é com o derreferenciamento, em que a url \url{http://purl.org/socialparticipation/opa/Participant} lista todos os participantes da OPA, e sua superclasse, \url{http://purl.org/socialparticipation/ops/Participant} apresenta todos os participantes, sejam da OPA, do AA ou do Cidade Democrática.
+    \item Relacionamento das triplas com namespaces externos através da ontologia, com as propriedades \texttt{rdfs:subClassOf} e~\texttt{rdfs:subPropertyOf}. Esta implementação pode vir na medida em que a comunidade se apropriar do andamento, pois estas inferências tornam as consultas lentas pela utilização da máquina de inferência em tempo real ou aumentam a quantidade de triplas no caso das inferências offline. Ou seja, nos estágios iniciais, é mais leve e simples não utilizar namespaces externos.
+    \item Liberação da ontologia com \emph{blueprints} em imagens. Acréscimo das restrições de classe, e axiomas de pripriedade na medida em que houver utilidade para não enrijecer a estrutura.
+\end{itemize}
+
+Neste contexto, além da ontologia disponível no primeiro produto desta consultoria, a OPa conta com as estruturas orientadas aos dados do portal, apresentadas nas imagens~\ref{fig:},~\ref{fig:},~\ref{fig:}.
+
 \section{Revisão da Triplificação do Participa.br}
+O script de triplificação disponibilizado no produto 2 foi adaptado para o paradigma explicitado no Apêndice~\ref{ap:ropa}. Além disso,
+foram acrescentadas à triplificação algumas informações adicionais de usuários e das postagens em si. O script de triplificação, revisado, está em: \url{http://github.com/ttm/pnud5/scripts/triplificaParticipa22112014.py}.
+
 \section{Ontologia e Vocabulário da Biblioteca Social (OBS e VBS)}
-\subsection{PNPS}
+Por ocasião do levantamento da Biblioteca (digital e semântica de participação) Social, por iniciativa da SNAS/SGPR e com esforços de diversos parceiros, o consultor iniciou uma sequência de entrevistas que culminaram com um workshop na SGPR no dia 20/10/2014, para contribuições de parceiros diversos. Além das entrevistas individuais e dos workshops, foram consideradas documentações de referência. Em especial documentos produzidos ou referentes às instâncias e mecanismos de participação social, um produto da consultora Carmen Romcy e a própria PNPS. Todo o processo foi permeado de diversas trocas de mensagens entre o consultor e equipes do particpa.br, UnB, IPEA, SNAS e MP.
+
+Este apêndice expõe estas contribuições e as resultantes organizações ontológicas e de vocabulários.
+
+
 \subsection{Entrevistas}
 \subsection{Relatório de implementação das contribuições do Workshop dia 20/Out/2014, sobre a biblioteca (semântica de participação) social}
 \begin{figure}[h!]
@@ -168,7 +216,10 @@ Embora os trabalhos de decupagem do banco e de triplificação dos dados sejam e
   \caption{Diagrama de Ouvidorias desenhado com o acompanhamento de especialista (Lígia).}
 \end{figure}
 \subsection{Materiais enviados pela equipe para referência}
+\subsection{PNPS}
+
 \section{Utilização dos dados linkados}
+
 As ontologias mais importantes para este trabalho precisam ser observáveis e anotáveis com facilidade por não especialistas.
 
 Uma primeira opção é aproveitar os dados/tripas disponíveis no endpoint sparql já aberto com uma instância Fuseki/Jena. Este endpoint pode ser acessado via linguagens de scripting para prototipação rápida, como JavaScript ou Python, fornecendo interfaces gráficas e web para navegação e análise. Estas possibilidades estão desenvolvidas nos produtos 2 e 3 desta mesma consultoria~\cite{prod2, prod3}.
