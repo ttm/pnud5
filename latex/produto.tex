@@ -142,7 +142,7 @@ Todos os desenvolvimentos desta ontologia e a triplificação de dados do AA em 
 A ontologia do AA está no webprotege da Stanford~\url{http://webprotege.stanford.edu/#Edit:projectId=5207dd13-8706-4836-bad9-6cba1c81de29}.
 
 \subsection{Ontologia do Cidade Democrática (OCD)}
-Outra instância participativa considerada prioritária pelo consultor para integração aos dados participativos linkados, e contemplada neste trabalho, foi o portal Cidade Democrática. Este portal possui grande complexidade e abundância de dados e conceitos. Assim, esta empreitada contrastou com a da Ontologiaa descrito no Apêndice~\ref{ap:aa}.
+Outra instância participativa considerada prioritária pelo consultor para integração aos dados participativos linkados, e contemplada neste trabalho, foi o portal Cidade Democrática. Este portal possui grande complexidade e abundância de dados e conceitos. Assim, esta empreitada contrastou com a da Ontologiaa descrita no Apêndice~\ref{ap:aa}.
 
 Com a grande complexidade das tabelas e dados, foi feita uma decupagem do banco de dados (disponibilizada em \url{https://github.com/ttm/ocd/blob/master/decupagemBD.txt}) e uma triplificação destes dados (script em: \url{https://github.com/ttm/ocd/blob/master/triplificaCD.py} e triplas resultantes em \url{https://github.com/ttm/ocd/blob/master/cdTriplestore.rdf.tar.gz}).
 
@@ -247,6 +247,8 @@ As contribuições dadas no workshop sobre as mesas de diálogo deram origem a u
 \subsection{Decreto 8.243 (PNPS)}\label{ap:pnps}
 A observação cuidadosa do decreto 8.243 foi posterior à incorporação de todas as entrevistas individuais, contribuições de workshop e documentos enviados pela SNAS/SGPR. Ao contrário das ontologias anteriores, que eram usadas de base para o vocabulário, foi feito primeiro o vocabulário. Na sequência, a ontologia foi feita com uma nova leitura do decreto. Isso ocorreu após um estudo inicial, em que ontologias por demais detalhadas da PNPS não se mostraram apropriadas para os usos participativos a que se destinavam. Os estudos ficaram no papel, mas podem ser retomados, principalmente caso usos despontem para representações com detalhamento ontológico que contemplem o texto de forma mais minuciosa.
 
+O decreto trata de cada mecanismo e instância de participação social, e uma seleção destas descrições está feita para cada instância e mecanismo. Além disso, há a mesa de monitoramento, que não é descrita diretamente como mecanismo ou instância de participação. Outra parte importante trata das relações que o decreto apresenta que não se referem a nenhum mecanismo ou instância em específico. A PNPS inteira e cada uma destas partes podem ser observadas por diagramas, apontado na Tabela~\ref{tab:ovbs}.
+
 \subsection{Incorporação e registro das contribuições do workshop do dia \\20/Out/2014, sobre a biblioteca (semântica de participação) social}
 Todas as contribuições entregues no workshop foram contempladas: ou integradas às OBS e VBS ou anotada com motivo para não estar integrada. As contribuições dos participantes foram escritas à caneta por eles sobre impressões em A4 e A3 dos diagramas das ontologias de conselhos e de conferências e sobre impressões em A4 das listagens dos vocabulários de conferências e conselhos. Fotos de cada uma das folhas com anotações dos participantes em caneta azul ou preta, e anotações do consultor em caneta vermelha, estão online em: \url{https://github.com/ttm/vocabulario-participacao/tree/master/figs/fotos}.
 
@@ -268,29 +270,29 @@ Scripts para fins diversos, todos em \url{https://github.com/ttm/vocabulario-par
 \vspace{-1cm}
 \centering
 \caption{Tabela de arquivos da OBS e VBS com o script que escreve os arquivos RDF (seja ontologia OWL ou vocabulário SKOS), o arquivo escrito em RDF/XML e em Turtle, diagramas para as ontologias, listagens para vocabulários, e uma instância do Webprotege com o recurso carregado e aberto para comentários e cópias. Veja os Apêndices~\ref{ap:ut} e~\ref{ap:sist} para mais informações.}
-\begin{tabular}{| p{6cm} | c | c | c | c | c | }\hline
+\begin{tabular}{| p{5,5cm} | c | c | c | c | c | }\hline
  {\bf descrição} & {\bf script} & {\bf RDF/XML} & {\bf Turtle} & {\bf diagramas ou listagens} & {\bf wp} \\\hline\hline
 vocabulário SKOS do material de referência enviado pela SNAS  & \ref{i:1} & \ref{i:2} & \ref{i:3} & \ref{i:4},~\ref{i:4_1},~\ref{i:5} &~\ref{i:5wp} \\\hline\hline
-ontologia OWL das conferências (Clovis) &~\ref{i:6}&~\ref{i:7}&~\ref{i:8}&~\ref{i:9},~\ref{i:10},~\ref{i:11},~\ref{i:11_1}&~\ref{i:11wp} \\
-vocabulário SKOS das conferências (Clovis) &~\ref{i:12}&~\ref{i:13}&~\ref{i:14}&~\ref{i:16},~\ref{i:17},~\ref{i:18}&~\ref{i:18wp} \\\hline\hline
+ontologia OWL das conferências &~\ref{i:6}&~\ref{i:7}&~\ref{i:8}&~\ref{i:9},~\ref{i:10},~\ref{i:11},~\ref{i:11_1}&~\ref{i:11wp} \\
+vocabulário SKOS das conferências &~\ref{i:12}&~\ref{i:13}&~\ref{i:14}&~\ref{i:16},~\ref{i:17},~\ref{i:18}&~\ref{i:18wp} \\\hline\hline
 
-ontologia OWL  de documentos e resultados das conferências (Clovis) &~\ref{i:6a}&~\ref{i:7a}&~\ref{i:8a}&~\ref{i:9a},~\ref{i:10a},~\ref{i:11a},~\ref{i:11_1a}&~\ref{i:11awp} \\
-vocabulário SKOS de documentos e resultados das conferências (Clovis) &~\ref{i:12a}&~\ref{i:13a}&~\ref{i:14a}&~\ref{i:16a},~\ref{i:17a},~\ref{i:18a}&~\ref{i:18awp} \\\hline\hline
+ontologia OWL  de documentos e resultados das conferências &~\ref{i:6a}&~\ref{i:7a}&~\ref{i:8a}&~\ref{i:9a},~\ref{i:10a},~\ref{i:11a},~\ref{i:11_1a}&~\ref{i:11awp} \\
+vocabulário SKOS de documentos e resultados das conferências &~\ref{i:12a}&~\ref{i:13a}&~\ref{i:14a}&~\ref{i:16a},~\ref{i:17a},~\ref{i:18a}&~\ref{i:18awp} \\\hline\hline
 
-ontologia OWL dos conselhos (Paula) &~\ref{i:19}&~\ref{i:20}&~\ref{i:21}&~\ref{i:22},~\ref{i:23},~\ref{i:24},~\ref{i:24_1}&~\ref{i:24wp} \\
-vocabulário SKOS dos conselhos (Paula) &~\ref{i:25}&~\ref{i:26}&~\ref{i:27}&~\ref{i:28},~\ref{i:29},~\ref{i:30}&~\ref{i:30wp} \\\hline\hline
+ontologia OWL dos conselhos &~\ref{i:19}&~\ref{i:20}&~\ref{i:21}&~\ref{i:22},~\ref{i:23},~\ref{i:24},~\ref{i:24_1}&~\ref{i:24wp} \\
+vocabulário SKOS dos conselhos &~\ref{i:25}&~\ref{i:26}&~\ref{i:27}&~\ref{i:28},~\ref{i:29},~\ref{i:30}&~\ref{i:30wp} \\\hline\hline
 
-ontologia   OWL das  ouvidorias (Lígia) &~\ref{i:31}&~\ref{i:32}&~\ref{i:33}&~\ref{i:34},~\ref{i:35},~\ref{i:36},~\ref{i:37}&~\ref{i:37wp} \\
-vocabulário SKOS das ouvidorias (Lígia) &~\ref{i:38}&~\ref{i:39}&~\ref{i:40}&~\ref{i:41},~\ref{i:42},~\ref{i:43}&~\ref{i:43wp} \\\hline\hline
+ontologia   OWL das  ouvidorias &~\ref{i:31}&~\ref{i:32}&~\ref{i:33}&~\ref{i:34},~\ref{i:35},~\ref{i:36},~\ref{i:37}&~\ref{i:37wp} \\
+vocabulário SKOS das ouvidorias &~\ref{i:38}&~\ref{i:39}&~\ref{i:40}&~\ref{i:41},~\ref{i:42},~\ref{i:43}&~\ref{i:43wp} \\\hline\hline
 
-ontologia   OWL  das consultas públicas (XX) &~\ref{i:44}&~\ref{i:45}&~\ref{i:46}&~\ref{i:47},~\ref{i:48},~\ref{i:49},~\ref{i:50}&~\ref{i:50wp} \\
-vocabulário SKOS das consultas públicas (XX) &~\ref{i:51}&~\ref{i:52}&~\ref{i:53}&~\ref{i:54},~\ref{i:55},~\ref{i:56}&~\ref{i:56wp} \\\hline\hline
+ontologia   OWL  das consultas públicas &~\ref{i:44}&~\ref{i:45}&~\ref{i:46}&~\ref{i:47},~\ref{i:48},~\ref{i:49},~\ref{i:50}&~\ref{i:50wp} \\
+vocabulário SKOS das consultas públicas &~\ref{i:51}&~\ref{i:52}&~\ref{i:53}&~\ref{i:54},~\ref{i:55},~\ref{i:56}&~\ref{i:56wp} \\\hline\hline
 
-ontologia   OWL  das mesas de diálogo (XX) &~\ref{i:57}&~\ref{i:58}&~\ref{i:59}&~\ref{i:60},~\ref{i:61},~\ref{i:62},~\ref{i:63}&~\ref{i:63wp} \\
-vocabulário SKOS das mesas de diálogo (XX) &~\ref{i:64}&~\ref{i:65}&~\ref{i:66}&~\ref{i:67},~\ref{i:68},~\ref{i:69}&~\ref{i:69wp} \\\hline\hline
+ontologia   OWL  das mesas de diálogo &~\ref{i:57}&~\ref{i:58}&~\ref{i:59}&~\ref{i:60},~\ref{i:61},~\ref{i:62},~\ref{i:63}&~\ref{i:63wp} \\
+vocabulário SKOS das mesas de diálogo &~\ref{i:64}&~\ref{i:65}&~\ref{i:66}&~\ref{i:67},~\ref{i:68},~\ref{i:69}&~\ref{i:69wp} \\\hline\hline
 
-ontologia   OWL  do Decreto 8.243 (PNPS) &~\ref{i:70}&~\ref{i:71}&~\ref{i:72}&~\ref{i:73},~\ref{i:75},{\bf ~\ref{i:76} - \ref{i:76ii} }&~\ref{i:76wp} \\
-vocabulário SKOS do Decreto 8.243 (PNPS) &~\ref{i:77}&~\ref{i:78}&~\ref{i:79}&~\ref{i:80},~\ref{i:81},~\ref{i:82}&~\ref{i:82wp} \\\hline\hline
+ontologia   OWL  do Decreto 8.243 &~\ref{i:70}&~\ref{i:71}&~\ref{i:72}&~\ref{i:73},~\ref{i:75},{\bf ~\ref{i:76} - \ref{i:76ii} }&~\ref{i:76wp} \\
+vocabulário SKOS do Decreto 8.243 &~\ref{i:77}&~\ref{i:78}&~\ref{i:79}&~\ref{i:80},~\ref{i:81},~\ref{i:82}&~\ref{i:82wp} \\\hline\hline
 
 SKOS do vocabulário do IPEA de participação social &~\ref{i:83}&~\ref{i:84}&~\ref{i:85}&~\ref{i:86}&~\ref{i:86wp} \\\hline\hline
 \end{tabular}\label{tab:ovbs}
