@@ -244,11 +244,30 @@ As contribuições dadas no workshop sobre as consultas públicas deram origem a
 As contribuições dadas no workshop sobre as mesas de diálogo deram origem a uma ontologia e um vocabulário iniciais, conforme a Tabela~\ref{tab:ovbs}.
 
 
+\subsection{Decreto 8.243 (PNPS)}\label{ap:pnps}
+A observação cuidadosa do decreto 8.243 foi posterior à incorporação de todas as entrevistas individuais, contribuições de workshop e documentos enviados pela SNAS/SGPR. Ao contrário das ontologias anteriores, que eram usadas de base para o vocabulário, foi feito primeiro o vocabulário. Na sequência, a ontologia foi feita com uma nova leitura do decreto. Isso ocorreu após um estudo inicial, em que ontologias por demais detalhadas da PNPS não se mostraram apropriadas para os usos participativos a que se destinavam. Os estudos ficaram no papel, mas podem ser retomados, principalmente caso usos despontem para representações com detalhamento ontológico que contemplem o texto de forma mais minuciosa.
+
+\subsection{Incorporação e registro das contribuições do workshop do dia \\20/Out/2014, sobre a biblioteca (semântica de participação) social}
+Todas as contribuições entregues no workshop foram contempladas: ou integradas às OBS e VBS ou anotada com motivo para não estar integrada. As contribuições dos participantes foram escritas à caneta por eles sobre impressões em A4 e A3 dos diagramas das ontologias de conselhos e de conferências e sobre impressões em A4 das listagens dos vocabulários de conferências e conselhos. Fotos de cada uma das folhas com anotações dos participantes em caneta azul ou preta, e anotações do consultor em caneta vermelha, estão online em: \url{https://github.com/ttm/vocabulario-participacao/tree/master/figs/fotos}.
+
+\subsection{Scripts adicionais}
+Scripts para fins diversos, todos em \url{https://github.com/ttm/vocabulario-participacao/tree/master/scripts/}:
+\begin{itemize}
+    \item dspaceVocabLista.py - monta lista XML com todos os conceitos SKOS da VBS, no formato aceito pelo DSpace. Talvez seja útil algum detalhamento neste XML, o que precisa ser avaliado com os usuários/gestores.
+    \item tematres.py - monta lista de termos da VBS para importação pelo tematres.
+    \item tematresAutoridades.py - monta lista de autoridades da VBS para importação pelo tematres.
+    \item triplificaConferencias.py - triplifica a tabela .xls com dados sobre conferências nacionais.
+    \item triplificaConselhos.py -  triplifica a tabela .xls com dados sobre conselhos.
+    \item vocabTexto.py - utiliza RDF da VBS para fazer os vocabulários em listas simples e enriquecidas de informações.
+\end{itemize}
+
+\subsection{Sistematização das instâncias e arquivos principais}\label{ap:sist}
+
 
 \begin{table}[htpq!]
 \vspace{-1cm}
 \centering
-\caption{Tabela de arquivos da OBS e VBS com o script que escreve os arquivos RDF (seja ontologia OWL ou vocabulário SKOS), o arquivo escrito em RDF/XML e em Turtle, diagramas para as ontologias, listagens para vocabulários, e uma instância do Webprotege com o recurso carregado e aberto para comentários e cópias. Veja o Apêndice~\ref{ap:ut} para mais informações.}
+\caption{Tabela de arquivos da OBS e VBS com o script que escreve os arquivos RDF (seja ontologia OWL ou vocabulário SKOS), o arquivo escrito em RDF/XML e em Turtle, diagramas para as ontologias, listagens para vocabulários, e uma instância do Webprotege com o recurso carregado e aberto para comentários e cópias. Veja os Apêndices~\ref{ap:ut} e~\ref{ap:sist} para mais informações.}
 \begin{tabular}{| p{6cm} | c | c | c | c | c | }\hline
  {\bf descrição} & {\bf script} & {\bf RDF/XML} & {\bf Turtle} & {\bf diagramas ou listagens} & {\bf wp} \\\hline\hline
 vocabulário SKOS do material de referência enviado pela SNAS  & \ref{i:1} & \ref{i:2} & \ref{i:3} & \ref{i:4},~\ref{i:4_1},~\ref{i:5} &~\ref{i:5wp} \\\hline\hline
@@ -448,22 +467,6 @@ Links da Tabela~\ref{tab:ovbs}:
     \item \url{http://webprotege.stanford.edu/#Edit:projectId=11cf0d1a-b13e-43bc-b651-9d95471a692a}\label{i:86wp}
 \end{enumerate}
 }
-\subsection{Decreto 8.243 (PNPS)}\label{ap:pnps}
-A observação cuidadosa do decreto 8.243 foi posterior à incorporação de todas as entrevistas individuais, contribuições de workshop e documentos enviados pela SNAS/SGPR. Ao contrário das ontologias anteriores, que eram usadas de base para o vocabulário, foi feito primeiro o vocabulário. Na sequência, a ontologia foi feita com uma nova leitura do decreto. Isso ocorreu após um estudo inicial, em que ontologias por demais detalhadas da PNPS não se mostraram apropriadas para os usos participativos a que se destinavam. Os estudos ficaram no papel, mas podem ser retomados, principalmente caso usos despontem para representações com detalhamento ontológico que contemplem o texto de forma mais minuciosa.
-
-\subsection{Incorporação e registro das contribuições do workshop do dia \\20/Out/2014, sobre a biblioteca (semântica de participação) social}
-Todas as contribuições entregues no workshop foram contempladas: ou integradas às OBS e VBS ou anotada com motivo para não estar integrada. As contribuições dos participantes foram escritas à caneta por eles sobre impressões em A4 e A3 dos diagramas das ontologias de conselhos e de conferências e sobre impressões em A4 das listagens dos vocabulários de conferências e conselhos. Fotos de cada uma das folhas com anotações dos participantes em caneta azul ou preta, e anotações do consultor em caneta vermelha, estão online em: \url{https://github.com/ttm/vocabulario-participacao/tree/master/figs/fotos}.
-
-\subsection{Scripts adicionais}
-Scripts para fins diversos, todos em \url{https://github.com/ttm/vocabulario-participacao/tree/master/scripts/}:
-\begin{itemize}
-    \item dspaceVocabLista.py - monta lista XML com todos os conceitos SKOS da VBS, no formato aceito pelo DSpace. Talvez seja útil algum detalhamento neste XML, o que precisa ser avaliado com os usuários/gestores.
-    \item tematres.py - monta lista de termos da VBS para importação pelo tematres.
-    \item tematresAutoridades.py - monta lista de autoridades da VBS para importação pelo tematres.
-    \item triplificaConferencias.py - triplifica a tabela .xls com dados sobre conferências nacionais.
-    \item triplificaConselhos.py -  triplifica a tabela .xls com dados sobre conselhos.
-    \item vocabTexto.py - utiliza RDF da VBS para fazer os vocabulários em listas simples e enriquecidas de informações.
-\end{itemize}
 
 \section{Utilização dos dados linkados}\label{ap:ut}
 
