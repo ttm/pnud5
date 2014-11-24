@@ -201,11 +201,11 @@ Neste contexto, além da ontologia disponível no primeiro produto desta consult
 \section{Revisão da Triplificação do Participa.br}
 O script de triplificação disponibilizado no produto 2 foi adaptado para o paradigma explicitado no Apêndice~\ref{ap:ropa}. Além disso,
 foram acrescentadas à triplificação algumas informações adicionais de usuários e das postagens em si. O script de triplificação, revisado, está em: \url{http://github.com/ttm/pnud5/scripts/triplificaParticipa22112014.py}.
-
+\newpage
 \section{Ontologia e Vocabulário da Biblioteca Social (OBS e VBS)}
-Por ocasião do levantamento da Biblioteca (digital e semântica de participação) Social, por iniciativa da SNAS/SGPR e com esforços de diversos parceiros, o consultor iniciou uma sequência de entrevistas que culminaram com um workshop na SGPR no dia 20/10/2014, para contribuições de parceiros diversos. Além das entrevistas individuais e dos workshops, foram consideradas documentações de referência produzidas sobre e pelos mecanismos e instancias de participação social. A PNPS foi considerada separadamente, dado o monumento informacional que contém o decreto. Todo o processo foi permeado de diversas trocas de mensagens entre o consultor e equipes do particpa.br, UnB, IPEA, SNAS e MP.
+Por ocasião do levantamento da Biblioteca (digital e semântica de participação) Social, por iniciativa da SNAS/SG-PR, e com esforços de diversos parceiros, o consultor iniciou uma sequência de entrevistas individuais. Um workshop foi feito na SGPR no dia 20/10/2014 para receber contribuições de parceiros diversos. Além das entrevistas individuais e do workshop, foram consideradas documentações de referência produzidas sobre e pelos mecanismos e instancias de participação social. A PNPS foi considerada separadamente, dada a informatividade do decreto. Todo o processo foi permeado de troca de mensagens entre o consultor e equipes do Particpa.br, UnB, IPEA, SNAS e MP.
 
-Este apêndice expõe estas contribuições e as resultantes organizações ontológicas e de vocabulários.
+Este apêndice expõe estas contribuições e as organizações ontológicas e de vocabulários que delas resultaram.
 
 \subsection{Materiais enviados pela equipe para referência}
 Foi considerado um material fruto de articulação da SNAS. O material consiste de documentos produzidos ou referentes às instâncias e mecanismos de participação social e um produto da consultora Carmen Romcy. Este material deu origem a um vocabulário SKOS sobre documentos de participação social, complementar aos obtidos nos apêndices seguintes. 
@@ -215,58 +215,65 @@ O material em si está no link~\url{https://drive.google.com/file/d/0B7GnkNzm0kx
  O decreto 8.243 é considerado no Apêndice~\ref{ap:pnps}.
 
 \subsection{Entrevistas individuais e workshop}
-Especialistas foram entrevistados para especificações ontológicas iniciais de instâncias de participação social e estão citados junto às instâncias sobre as quais ajudaram. Especialistas que auxiliaram no workshop estão citados com o marcador ws.
+Especialistas foram entrevistados individualmente para especificações ontológicas iniciais de instâncias de participação social e estão citados junto às instâncias sobre as quais ajudaram junto aos especialistas que contribuíram no workshop.
 
 \subsubsection{Contextualização - Pedro Pontual, Carmen Romcy e Fernando Cruz}
 As três entrevistas iniciais foram feitas com o diretor do DPS/SNAS Pedro Pontual, com a consultora Carmen Romcy (ambas no dia no dia 02 de outubro) e com o prof. Fernando Cruz (11 de outubro).
 
-Na ocasião, foram feitas perguntas para contextualizar a OBS e VBS. Estas perguntas que incluiam os usos que idealizavam os entrevistados para a biblioteca, possibilidades de alimentação, público alvo, informações disponibilizadas, técnicas e tecnologias.
+Na ocasião, foram feitas perguntas para contextualizar a OBS e VBS. Estas perguntas incluíam os usos que idealizavam os entrevistados para a biblioteca, possibilidades de alimentação, público alvo, informações disponibilizadas, técnicas e tecnologias.
 
-Dada a extensão deste produto, este conteúdo não foi organizado nem revisado, e os entrevistados não foram contatados para a liberação das anotações destas entrevistas. O consultor manterá uma versão online em~\url{https://docs.google.com/document/d/1jJuzoQzgqPn_FUFVbleXeiKsXHD1Bd0D0O68nXXN7K8/edit?usp=sharing} para os fins deste documento e como registro de processo.
+Dada a extensão deste produto, este conteúdo não foi organizado nem revisado, e os entrevistados não foram contatados para a liberação das anotações destas entrevistas. O consultor manterá uma versão online em~\url{https://docs.google.com/document/d/1jJuzoQzgqPn_FUFVbleXeiKsXHD1Bd0D0O68nXXN7K8/edit?usp=sharing} para os fins deste documento e como registro do processo.
 
-\subsubsection{Especificação das Conferências - Clovis Souza}
-Materiais iniciais dos profs. Fernando Cruz e Carmem Romcy permitiram rascunhos iniciais da ontologia de conferências nacionais. Estes rascunhos foram usados como base para a entrevista feita com o Clovis Souza. Nos dias 30 de setembro e 03 de outubro, foram revisados os rascunhos iniciais e especificadas relações dos documentos. Foram gerados dois conjuntos de conceitos relacionados ontologicamente e com vocabulário.
+\subsubsection{Especificação das Conferências - Clovis Souza (entrevista), Clovis, Pedro, Fabiano (workshop)}
+Materiais dos profs. Fernando Cruz e Carmem Romcy permitiram rascunhos iniciais da ontologia de conferências nacionais. Estes rascunhos foram usados como base para a entrevista feita com o Clovis Souza em dois dias: 30 de setembro e 03 de outubro. Foram revisados os rascunhos iniciais e especificadas relações dos documentos. Foram gerados dois conjuntos de conceitos relacionados ontologicamente e com vocabulário.
 
-O primeiro conjunto é centrado na conferência em si, e os conceitos principais envolvidos. O segundo conjunto é centrado nos documentos e nos resultados de conferência. Veja a Tabela~\ref{tab:ovbs} para mais informações sobre os scripts que escrevem as triplas RDF, os arquivos com ontologias OWL e vocabulários SKOS, e diagramas e listagens.
+O primeiro conjunto é centrado na conferência em si, e os conceitos principais envolvidos. O segundo conjunto é centrado nos documentos e nos resultados das conferências. Veja a Tabela~\ref{tab:ovbs} para os scripts que escrevem as triplas RDF, os arquivos com ontologias OWL e vocabulários SKOS, e diagramas e listagens.
 
-\subsubsection{Especificação dos Conselhos - Paula Pompeu}
-No dia 16 de outubro, foi feita uma entrevista com Paula Pompeu para revisar a ontologia dos conselhos nacionais.
-Veja a Tabela~\ref{tab:ovbs} para mais informações sobre o script que escreve as triplas RDF, os arquivos com ontologias OWL e vocabulários SKOS, e diagramas e listagens.
+\subsubsection{Especificação dos Conselhos - Paula Pompeu (entrevista)}
+No dia 16 de outubro, foi feita uma entrevista com Paula Pompeu para revisar os rascunhos sobre os conselhos nacionais.
+Veja a Tabela~\ref{tab:ovbs} para os scripts que escrevem as triplas RDF, os arquivos com ontologias OWL e vocabulários SKOS, e diagramas e listagens.
 
-\subsubsection{Especificação das Ouvidorias - Lígia M. A. Pereira}
+\subsubsection{Especificação das Ouvidorias - Lígia M. A. Pereira (entrevista), Anjuli Osterne e Paulo Guimarães (workshop)}
 No dia 21 de outubro de 2014, foi feita uma entrevista com Lígia Pereira para revistar a ontologia de ouvidorias federais.
-Veja a Tabela~\ref{tab:ovbs} para mais informações sobre o script que escreve as triplas RDF, os arquivos com ontologias OWL e vocabulários SKOS, e diagramas e listagens.
+Veja a Tabela~\ref{tab:ovbs} para os scripts que escrevem as triplas RDF, os arquivos com ontologias OWL e vocabulários SKOS, e diagramas e listagens.
+
+\subsubsection{Especificação das Consultas públicas - Fernanda Lobato, Valéssio e Silvia (workshop)}
+As contribuições dadas no workshop sobre as consultas públicas deram origem a uma ontologia e um vocabulário iniciais, conforme a Tabela~\ref{tab:ovbs}.
+
+\subsubsection{Especificação das Mesas de diálogo - Roberto, Márcia (workshop)}
+As contribuições dadas no workshop sobre as mesas de diálogo deram origem a uma ontologia e um vocabulário iniciais, conforme a Tabela~\ref{tab:ovbs}.
 
 
 
 \begin{table}[htpq!]
+\vspace{-1cm}
 \centering
-\caption{Tabela de arquivos da OBS e VBS.}
-\begin{tabular}{| p{6cm} | c | c | c | c | }\hline
- {\bf descrição} & {\bf script} & {\bf RDF/XML} & {\bf Turtle} & {\bf diagramas ou listagens} \\\hline\hline
-vocabulário SKOS do material de referência enviado pela SNAS  & \ref{i:1} & \ref{i:2} & \ref{i:3} & \ref{i:4},~\ref{i:4_1},~\ref{i:5} \\\hline\hline
-ontologia OWL das conferências (Clovis) &~\ref{i:6}&~\ref{i:7}&~\ref{i:8}&~\ref{i:9},~\ref{i:10},~\ref{i:11},~\ref{i:11_1} \\
-vocabulário SKOS das conferências (Clovis) &~\ref{i:12}&~\ref{i:13}&~\ref{i:14}&~\ref{i:16},~\ref{i:17},~\ref{i:18} \\\hline\hline
+\caption{Tabela de arquivos da OBS e VBS com o script que escreve os arquivos RDF (seja ontologia OWL ou vocabulário SKOS), o arquivo escrito em RDF/XML e em Turtle, diagramas para as ontologias, listagens para vocabulários, e uma instância do Webprotege com o recurso carregado e aberto para comentários e cópias. Veja o Apêndice~\ref{ap:ut} para mais informações.}
+\begin{tabular}{| p{6cm} | c | c | c | c | c | }\hline
+ {\bf descrição} & {\bf script} & {\bf RDF/XML} & {\bf Turtle} & {\bf diagramas ou listagens} & {\bf wp} \\\hline\hline
+vocabulário SKOS do material de referência enviado pela SNAS  & \ref{i:1} & \ref{i:2} & \ref{i:3} & \ref{i:4},~\ref{i:4_1},~\ref{i:5} &~\ref{i:5wp} \\\hline\hline
+ontologia OWL das conferências (Clovis) &~\ref{i:6}&~\ref{i:7}&~\ref{i:8}&~\ref{i:9},~\ref{i:10},~\ref{i:11},~\ref{i:11_1}&~\ref{i:11wp} \\
+vocabulário SKOS das conferências (Clovis) &~\ref{i:12}&~\ref{i:13}&~\ref{i:14}&~\ref{i:16},~\ref{i:17},~\ref{i:18}&~\ref{i:18wp} \\\hline\hline
 
-ontologia OWL  de documentos e resultados das conferências (Clovis) &~\ref{i:6a}&~\ref{i:7a}&~\ref{i:8a}&~\ref{i:9a},~\ref{i:10a},~\ref{i:11a},~\ref{i:11_1a} \\
-vocabulário SKOS de documentos e resultados das conferências (Clovis) &~\ref{i:12a}&~\ref{i:13a}&~\ref{i:14a}&~\ref{i:16a},~\ref{i:17a},~\ref{i:18a} \\\hline\hline
+ontologia OWL  de documentos e resultados das conferências (Clovis) &~\ref{i:6a}&~\ref{i:7a}&~\ref{i:8a}&~\ref{i:9a},~\ref{i:10a},~\ref{i:11a},~\ref{i:11_1a}&~\ref{i:11awp} \\
+vocabulário SKOS de documentos e resultados das conferências (Clovis) &~\ref{i:12a}&~\ref{i:13a}&~\ref{i:14a}&~\ref{i:16a},~\ref{i:17a},~\ref{i:18a}&~\ref{i:18awp} \\\hline\hline
 
-ontologia OWL dos conselhos (Paula) &~\ref{i:19}&~\ref{i:20}&~\ref{i:21}&~\ref{i:22},~\ref{i:23},~\ref{i:24},~\ref{i:24_1} \\
-vocabulário SKOS dos conselhos (Paula) &~\ref{i:25}&~\ref{i:26}&~\ref{i:27}&~\ref{i:28},~\ref{i:29},~\ref{i:30} \\\hline\hline
+ontologia OWL dos conselhos (Paula) &~\ref{i:19}&~\ref{i:20}&~\ref{i:21}&~\ref{i:22},~\ref{i:23},~\ref{i:24},~\ref{i:24_1}&~\ref{i:24wp} \\
+vocabulário SKOS dos conselhos (Paula) &~\ref{i:25}&~\ref{i:26}&~\ref{i:27}&~\ref{i:28},~\ref{i:29},~\ref{i:30}&~\ref{i:30wp} \\\hline\hline
 
-ontologia   OWL das  ouvidorias (Lígia) &~\ref{i:31}&~\ref{i:32}&~\ref{i:33}&~\ref{i:34},~\ref{i:35},~\ref{i:36},~\ref{i:37} \\
-vocabulário SKOS das ouvidorias (Lígia) &~\ref{i:38}&~\ref{i:39}&~\ref{i:40}&~\ref{i:41},~\ref{i:42},~\ref{i:43} \\\hline\hline
+ontologia   OWL das  ouvidorias (Lígia) &~\ref{i:31}&~\ref{i:32}&~\ref{i:33}&~\ref{i:34},~\ref{i:35},~\ref{i:36},~\ref{i:37}&~\ref{i:37wp} \\
+vocabulário SKOS das ouvidorias (Lígia) &~\ref{i:38}&~\ref{i:39}&~\ref{i:40}&~\ref{i:41},~\ref{i:42},~\ref{i:43}&~\ref{i:43wp} \\\hline\hline
 
-ontologia   OWL  das consultas públicas (XX) &~\ref{i:44}&~\ref{i:45}&~\ref{i:46}&~\ref{i:47},~\ref{i:48},~\ref{i:49},~\ref{i:50} \\
-vocabulário SKOS das consultas públicas (XX) &~\ref{i:51}&~\ref{i:52}&~\ref{i:53}&~\ref{i:54},~\ref{i:55},~\ref{i:56} \\\hline\hline
+ontologia   OWL  das consultas públicas (XX) &~\ref{i:44}&~\ref{i:45}&~\ref{i:46}&~\ref{i:47},~\ref{i:48},~\ref{i:49},~\ref{i:50}&~\ref{i:50wp} \\
+vocabulário SKOS das consultas públicas (XX) &~\ref{i:51}&~\ref{i:52}&~\ref{i:53}&~\ref{i:54},~\ref{i:55},~\ref{i:56}&~\ref{i:56wp} \\\hline\hline
 
-ontologia   OWL  das mesas de diálogo (XX) &~\ref{i:57}&~\ref{i:58}&~\ref{i:59}&~\ref{i:60},~\ref{i:61},~\ref{i:62},~\ref{i:63} \\
-vocabulário SKOS das mesas de diálogo (XX) &~\ref{i:64}&~\ref{i:65}&~\ref{i:66}&~\ref{i:67},~\ref{i:68},~\ref{i:69} \\\hline\hline
+ontologia   OWL  das mesas de diálogo (XX) &~\ref{i:57}&~\ref{i:58}&~\ref{i:59}&~\ref{i:60},~\ref{i:61},~\ref{i:62},~\ref{i:63}&~\ref{i:63wp} \\
+vocabulário SKOS das mesas de diálogo (XX) &~\ref{i:64}&~\ref{i:65}&~\ref{i:66}&~\ref{i:67},~\ref{i:68},~\ref{i:69}&~\ref{i:69wp} \\\hline\hline
 
-ontologia   OWL  do Decreto 8.243 (PNPS) &~\ref{i:70}&~\ref{i:71}&~\ref{i:72}&~\ref{i:73},~\ref{i:74},~\ref{i:76} \\
-vocabulário SKOS do Decreto 8.243 (PNPS) &~\ref{i:77}&~\ref{i:78}&~\ref{i:79}&~\ref{i:80},~\ref{i:81},~\ref{i:82} \\\hline\hline
+ontologia   OWL  do Decreto 8.243 (PNPS) &~\ref{i:70}&~\ref{i:71}&~\ref{i:72}&~\ref{i:73},~\ref{i:76}&~\ref{i:76wp} \\
+vocabulário SKOS do Decreto 8.243 (PNPS) &~\ref{i:77}&~\ref{i:78}&~\ref{i:79}&~\ref{i:80},~\ref{i:81},~\ref{i:82}&~\ref{i:82wp} \\\hline\hline
 
-vocabulário SKOS do Vocabulário do IPEA de Participação Social &~\ref{i:83}&~\ref{i:84}&~\ref{i:85}&~\ref{i:86} \\\hline\hline
+SKOS do vocabulário do IPEA de participação social &~\ref{i:83}&~\ref{i:84}&~\ref{i:85}&~\ref{i:86}&~\ref{i:86wp} \\\hline\hline
 \end{tabular}\label{tab:ovbs}
 \end{table}
 
@@ -279,6 +286,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsDocumentacaoVBS.txt} \label{i:4}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsDocumentacaoVBSPodada.txt}\label{i:4_1}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsDocumentacaoVBSPalavras.txt}\label{i:5}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=cfe287a2-71a7-4f45-9387-5a4ff097647b}\label{i:5wp}
 
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsConferencias.py}\label{i:6}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsConferencia.owl}\label{i:7}
@@ -287,6 +295,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConferencia.png}\label{i:10}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConferencia.png}\label{i:11}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/dot/obsConferencia.dot}\label{i:11_1}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=b9c725ac-e673-443f-97ef-dab340e4a94f}\label{i:11wp}
 
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsConferencias.py}\label{i:12}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsConferencia.rdf}\label{i:13}
@@ -294,6 +303,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferencia.txt}\label{i:16}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferenciaPalavras.txt}\label{i:17}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferenciaPodada.txt}\label{i:18}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=dd679187-69bf-40b9-a811-26644c75caf2}\label{i:18wp}
 
  \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsConferenciasDocsRes.py}    \label{i:6a}
      \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsConferenciaDocsRes.owl}    \label{i:7a}
@@ -302,6 +312,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConferenciaDocsRes.png}   \label{i:10a}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConferenciaDocsRes.png}   \label{i:11a}
      \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/dot/obsConferenciaDocsRes.dot} \label{i:11_1a}
+     \item \url{http://webprotege.stanford.edu/#Edit:projectId=4f78f256-4f43-4318-b3ee-4395e50a38fd} \label{i:11awp}
 
 \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsConferenciasDocsRes.py}         \label{i:12a}
      \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsConferenciaDocsRes.rdf}        \label{i:13a}
@@ -309,6 +320,7 @@ Links:
      \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferenciaDocsRes.txt}        \label{i:16a}
      \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferenciaDocsResPalavras.txt}\label{i:17a}
      \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferenciaDocsResPodada.txt}  \label{i:18a}
+     \item \url{http://webprotege.stanford.edu/#Edit:projectId=523e053a-6d9a-4baf-9ac9-b3c7f4b3f5a3}  \label{i:18awp}
 
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsConselhos.py}\label{i:19}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsConselho.owl}\label{i:20}
@@ -317,6 +329,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConselho.png}\label{i:23}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConselho.png}\label{i:24}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/dot/obsConselho.dot}\label{i:24_1}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=b0e87a16-d33f-4ed4-86bd-e7c288f34215}\label{i:24wp}
 
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsConselhos.py}\label{i:25}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsConselho.rdf}\label{i:26}
@@ -324,6 +337,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConselho.txt}\label{i:28}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConselhoPalavras.txt}\label{i:29}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConselhoPodada.txt}\label{i:30}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=f921bc20-3650-4e64-a7ad-a83b1723b5a9}\label{i:30wp}
 
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsOuvidorias.py}\label{i:31}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsOuvidoria.owl}\label{i:32}
@@ -332,6 +346,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsOuvidoria.png}\label{i:35}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsOuvidoria.png}\label{i:36}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/dot/obsOuvidoria.dot}\label{i:37}
+    \item  \url{http://webprotege.stanford.edu/#Edit:projectId=f8968196-5f12-4b52-acae-9bcd89e75449}\label{i:37wp}
 
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsOuvidorias.py}\label{i:38}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsOuvidoria.rdf}\label{i:39}
@@ -339,6 +354,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsOuvidoria.txt}\label{i:41}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsOuvidoriaPalavras.txt}\label{i:42}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsOuvidoriaPodada.txt}\label{i:43}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=673e6bd0-f814-4d9c-abb5-fc61b377e95e}\label{i:43wp}
 
  \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsConsultas.py}\label{i:44}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsConsulta.owl}\label{i:45}
@@ -347,6 +363,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConsulta.png}\label{i:48}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConsulta.png}\label{i:49}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/dot/obsConsulta.dot}\label{i:50}
+    \item  \url{http://webprotege.stanford.edu/#Edit:projectId=d1ebd08c-a88e-48f6-a92c-54664573ba87}\label{i:50wp}
 
 \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsConsultas.py}        \label{i:51}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsConsulta.rdf}        \label{i:52}
@@ -354,6 +371,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConsulta.txt}        \label{i:54}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConsultaPalavras.txt}\label{i:55}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConsultaPodada.txt}  \label{i:56}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=c03fba0c-75ff-4382-87c2-c86660cd7228}  \label{i:56wp}
 
  \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsMesasDeDialogo.py}\label{i:57}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsMesaDeDialogo.owl}\label{i:58}
@@ -362,6 +380,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsMesaDeDialogo.png}\label{i:61}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsMesaDeDialogo.png}\label{i:62}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/dot/obsMesaDeDialogo.dot}\label{i:63}
+    \item  \url{ihttp://webprotege.stanford.edu/#Edit:projectId=b76fbe91-6688-4973-92a1-a77bc09df8eb}\label{i:63wp}
 
 \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsMesasDeDialogo.py}        \label{i:64}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsMesaDeDialogo.rdf}        \label{i:65}
@@ -369,6 +388,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsMesaDeDialogo.txt}        \label{i:67}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsMesaDeDialogoPalavras.txt}\label{i:68}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsMesaDeDialogoPodada.txt}  \label{i:69}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=a0f33da0-3c37-480e-855c-6a9e544535e2}  \label{i:69wp}
 
  \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsPNPS.py} \label{i:70}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsPNPS.owl}\label{i:71}
@@ -376,6 +396,7 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsPNPS.png}\label{i:73}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsPNPS3.png}\label{i:75}
     \item  \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/dot/obsPNPS.dot}\label{i:76}
+    \item  \url{http://webprotege.stanford.edu/#Edit:projectId=1f8948f8-fa58-490e-9e81-79457c79a4a3}\label{i:76wp}
 
 \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsPNPS.py}         \label{i:77}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsPNPS.rdf}        \label{i:78}
@@ -383,35 +404,43 @@ Links:
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsPNPS.txt}        \label{i:80}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsPNPSPalavras.txt}\label{i:81}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsPNPSPodada.txt}  \label{i:82}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=e5c6b505-1c78-4cae-8424-8e628d070da6}  \label{i:82wp}
 
 \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsIPEA.py}         \label{i:83}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsIPEA.rdf}        \label{i:84}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsIPEA.ttl}        \label{i:85}
     \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsIPEAPalavras.txt}\label{i:86}
+    \item \url{http://webprotege.stanford.edu/#Edit:projectId=11cf0d1a-b13e-43bc-b651-9d95471a692a}\label{i:86wp}
 \end{enumerate}
 }
-\subsection{PNPS}\label{ap:pnps}
- e a própria PNPS.
+\subsection{Decreto 8.243 (PNPS)}\label{ap:pnps}
+A observação cuidadosa do decreto 8.243 foi posterior à incorporação de todas as entrevistas individuais, contribuições de workshop e documentos enviados pela SNAS/SGPR. Ao contrário das ontologias anteriores, que eram usadas de base para o vocabulário, foi feito primeiro o vocabulário. Na sequência, a ontologia foi feita com uma nova leitura do decreto. Isso ocorreu após um estudo inicial, em que ontologias por demais detalhadas da PNPS não se mostraram apropriadas para os usos participativos a que se destinavam. Os estudos ficaram no papel, mas podem ser retomados, principalmente caso usos despontem para representações com detalhamento ontológico que contemplem o texto de forma mais minuciosa.
 
-\subsection{Implementação das contribuições do Workshop dia 20/Out/2014, sobre a biblioteca (semântica de participação) social}
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=\textwidth,angle=270]{fotos/OuvidoriaLigia.jpg}
-  \caption{Diagrama de Ouvidorias desenhado com o acompanhamento de especialista (Lígia).}
-\end{figure}
+\subsection{Incorporação e registro das contribuições do workshop do dia \\20/Out/2014, sobre a biblioteca (semântica de participação) social}
+Todas as contribuições entregues no workshop foram contempladas: ou integradas às OBS e VBS ou anotada com motivo para não estar integrada. As contribuições dos participantes foram escritas à caneta por eles sobre impressões em A4 e A3 dos diagramas das ontologias de conselhos e de conferências e sobre impressões em A4 das listagens dos vocabulários de conferências e conselhos. Fotos de cada uma das folhas com anotações dos participantes em caneta azul ou preta, e anotações do consultor em caneta vermelha, estão online em: \url{https://github.com/ttm/vocabulario-participacao/tree/master/figs/fotos}.
 
-\section{Utilização dos dados linkados}
+\subsection{Scripts adicionais}
+Scripts para fins diversos, todos em \url{https://github.com/ttm/vocabulario-participacao/tree/master/scripts/}:
+\begin{itemize}
+    \item dspaceVocabLista.py - monta lista XML com todos os conceitos SKOS da VBS, no formato aceito pelo DSpace. Talvez seja útil algum detalhamento neste XML, o que precisa ser avaliado com os usuários/gestores.
+    \item tematres.py - monta lista de termos da VBS para importação pelo tematres.
+    \item tematresAutoridades.py - monta lista de autoridades da VBS para importação pelo tematres.
+    \item triplificaConferencias.py - triplifica a tabela .xls com dados sobre conferências nacionais.
+    \item triplificaConselhos.py -  triplifica a tabela .xls com dados sobre conselhos.
+    \item vocabTexto.py - utiliza RDF da VBS para fazer os vocabulários em listas simples e enriquecidas de informações.
+\end{itemize}
+
+\section{Utilização dos dados linkados}\label{ap:ut}
 
 As ontologias mais importantes para este trabalho precisam ser observáveis e anotáveis com facilidade por não especialistas.
 
-Uma primeira opção é aproveitar os dados/tripas disponíveis no endpoint sparql já aberto com uma instância Fuseki/Jena. Este endpoint pode ser acessado via linguagens de scripting para prototipação rápida, como JavaScript ou Python, fornecendo interfaces gráficas e web para navegação e análise. Estas possibilidades estão desenvolvidas nos produtos 2 e 3 desta mesma consultoria~\cite{prod2, prod3}.
+Uma primeira opção é aproveitar os dados/triplas disponíveis no endpoint sparql já aberto com uma instância Fuseki/Jena. Este endpoint pode ser acessado via linguagens de scripting para prototipação rápida, como JavaScript, Ruby ou Python, fornecendo interfaces gráficas e web para navegação e análise, com acesso pleno aos dados triplificados via buscas semânticas. Estas possibilidades estão desenvolvidas nos produtos 2, 3 e 4 desta mesma consultoria~\cite{repoProd2, repoProd3, repoProd4}. A OBS e VBS estão disponíveis no endpoint \url{http://200.144.255.210:8082/participacao/query}. Dados do AA, e suas relações ontológicas, estão disponíveis em \url{http://200.144.255.210:8082/aa/query}. Dados do Cidade Democrática, e suas relações ontológicas, estão disponíveis em \url{http://200.144.255.210:8082/cidadedemocratica/query}. Dados do Participa.br, e suas relações ontológidas, estão disponíveis em \url{http://200.144.255.210:8082/participabr/query}. Uma interface geral está em \url{http://200.144.255.210:8082/}. No momento, todos os dados e ontologias estão disponiveis em  \url{http://200.144.255.210:8082/participacao/query} junto à OBS e VBS, para facilitar experimentos.
 
 \subsection{Pubby}
-
 Com desenvolvimento recente no github \url{https://github.com/cygri/pubby}, é talvez o navegador de dados mais conhecido. Parece ser projeto do dig (grupo do Berners-Lee no MIT).
-Os testes mostraram que as consultas sparql demoravam demais para o montante de dados triplificados, portanto foram importados os rdfs. Para facilitar, o arquivo de configuração do pubby está em \url{https://github.com/ttm/vocabulario-participacao/blob/master/auxiliar/config.ttl}.
+Os testes mostraram que as consultas sparql demoravam demais para o montante de dados triplificados, portanto foram importados os rdfs no pubby diretamente. O arquivo de configuração do pubby está em \url{https://github.com/ttm/vocabulario-participacao/blob/master/auxiliar/config.ttl}.
 
-A url permanente \url{http://purl.org/socialparticipation/} é redirecionada para a instância do pubby, em: \url{http://200.144.255.210:8081/tpubby/page/}. Desta forma, \emph{todos} os conceitos da VBS e classes da OBS podem ser derreferenciados, como na Figura~\ref{fig:derre}.
+A url permanente \url{http://purl.org/socialparticipation/} é redirecionada para a instância do pubby, em: \url{http://200.144.255.210:8081/tpubby/page/}. Desta forma, \emph{todos} os conceitos da VBS e classes da OBS podem ser derreferenciados, como na Figura~\ref{fig:derre}. Todos os conceitos, classes e instâncias da OPA, OPS e AA estão também derreferenciados, como na Figura~\ref{fig:aashout}, através do redirecionamento do prefixo \url{http://purl.prg/socialparticipation/} para o endereço \url{http://200.144.255.210:8081/tpubby/page/}, onde opera o pubby.
 
 \begin{figure}[h!]
   \centering
@@ -419,13 +448,18 @@ A url permanente \url{http://purl.org/socialparticipation/} é redirecionada par
   \caption{Derreferenciamento do conceito de Instância de participação através da URI \url{http://purl.org/socialparticipation/obs/ParticipationInstance}.}\label{fig:derre}
 \end{figure}
 
-\subsection{Endpoint SparQL}
-
-Os dados da OBS, VBS, Participabr, AA e OCD estão disponíveis via endpoint SparQL, conforme o uso explicitado nos scripts do INotebook \url{http://200.144.255.210:8003/}.
+O pubby está operante em uma máquina de pesquisa da nuvem da USP, cuja administração é feita pelo consultor com a permissão de técnicos e docentes do IFSC/USP. Embora útil, a porta não padrão para navegação HTTP impede que a maioria dos gestores públicos federais acessem estes links e derreferenciem as URIs para obter informações sobre o vocábulo, classe ontológica, propriedade que relaciona um objeto a um dado ou outro objeto, instâncias de classes, etc. Colaboradores e funcionários podem estudar e testar o pubby e outras intefaces para dados linkados para que sejam disponibilizados servicos melhores e mais diversificados.
 
 \subsection{Webprotege}
 
-Permite que as ontologias e vocabulários estejam online e comentáveis.
+Este software permite que as ontologias e vocabulários estejam online e comentáveis, além da criação e edição de ontologias na própria interface.
+
+Nas tentativas do consultor de levantar uma instância deste software, foram encontrados alguns roteiros incompletos na wiki e conflitos do java. Dados os resultados instáveis e especificidades técnicas, o consultor subiu os arquivos no webprotege instalado e disponibilizado pela equipe da Stanford que desenvolve o webprotege. 
+No presente momento, apenas o consultor pode editar, mas todos podem comentar ou fazer cópias dos vocabulários e ontologias. Veja a Tabela~\ref{tab:ovbs} para os links.
+
+
+
+
 
 %\section{Cartas ao poder público federal}
 %\subsection{Religião e cultura livre}
