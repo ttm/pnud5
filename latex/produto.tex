@@ -203,20 +203,75 @@ O script de triplificação disponibilizado no produto 2 foi adaptado para o par
 foram acrescentadas à triplificação algumas informações adicionais de usuários e das postagens em si. O script de triplificação, revisado, está em: \url{http://github.com/ttm/pnud5/scripts/triplificaParticipa22112014.py}.
 
 \section{Ontologia e Vocabulário da Biblioteca Social (OBS e VBS)}
-Por ocasião do levantamento da Biblioteca (digital e semântica de participação) Social, por iniciativa da SNAS/SGPR e com esforços de diversos parceiros, o consultor iniciou uma sequência de entrevistas que culminaram com um workshop na SGPR no dia 20/10/2014, para contribuições de parceiros diversos. Além das entrevistas individuais e dos workshops, foram consideradas documentações de referência. Em especial documentos produzidos ou referentes às instâncias e mecanismos de participação social, um produto da consultora Carmen Romcy e a própria PNPS. Todo o processo foi permeado de diversas trocas de mensagens entre o consultor e equipes do particpa.br, UnB, IPEA, SNAS e MP.
+Por ocasião do levantamento da Biblioteca (digital e semântica de participação) Social, por iniciativa da SNAS/SGPR e com esforços de diversos parceiros, o consultor iniciou uma sequência de entrevistas que culminaram com um workshop na SGPR no dia 20/10/2014, para contribuições de parceiros diversos. Além das entrevistas individuais e dos workshops, foram consideradas documentações de referência produzidas sobre e pelos mecanismos e instancias de participação social. A PNPS foi considerada separadamente, dado o monumento informacional que contém o decreto. Todo o processo foi permeado de diversas trocas de mensagens entre o consultor e equipes do particpa.br, UnB, IPEA, SNAS e MP.
 
 Este apêndice expõe estas contribuições e as resultantes organizações ontológicas e de vocabulários.
 
+\subsection{Materiais enviados pela equipe para referência}
+Foi considerado um material fruto de articulação da SNAS. O material consiste de documentos produzidos ou referentes às instâncias e mecanismos de participação social e um produto da consultora Carmen Romcy. Este material deu origem a um vocabulário SKOS sobre documentos de participação social, complementar aos obtidos nos apêndices seguintes. O script que escreve o SKOS em RDF/XML e Turtle está em: \url{://github.com/ttm/vocabulario-participacao/blob/master/scripts/vbsDocumentacaoVBS.py}. O RDF/XML em~\url{https://github.com/ttm/vocabulario-participacao/blob/master/rdf/vbsDocumentacaoVBS.rdf} e o Turtle em~\url{https://github.com/ttm/vocabulario-participacao/blob/master/rdf/vbsDocumentacaoVBS.ttl}. Em texto detalhado e em árvore taxonomica~\url{https://github.com/ttm/vocabulario-participacao/blob/master/txt/vbsDocumentacaoVBS.txt}, em texto corrido~\url{https://github.com/ttm/vocabulario-participacao/blob/master/txt/vbsDocumentacaoVBSPalavras.txt}.
 
-\subsection{Entrevistas}
+O material em si está no link~\url{https://drive.google.com/file/d/0B7GnkNzm0kxvSTZWWDRyTFkzNm8/view?usp=sharing}.
+ O decreto 8.243 é considerado no Apêndice~\ref{ap:pnps}.
+
+\subsection{Entrevistas individuais}
+Especialistas foram entrevistados para especificações ontológicas iniciais de instâncias de participação social. Os especialistas estão citados abaixo junto ao auxílio que prestaram.
+
+\subsubsection{Especificação das Conferências - Clovis Souza}
+Materiais iniciais dos profs. Fernando Cruz e Carmem Romcy permitiram rascunhos iniciais da ontologia de conferências nacionais. Estes rascunhos foram usados como base para a entrevista feita com o Clovis Souza. No dia 30/setembro e no dia 03/outubro, foram revisados os rascunhos iniciais e especificadas relações dos documentos. Foram gerados dois conjuntos de conceitos relacionados ontologicamente e com vocabulário.
+
+O primeiro conjunto é centrado na conferência em si, e os conceitos principais envolvidos. O script que sintetiza o OWL em RDF/XML e Turtle, sintetiza 3 imagens da rede de conceitos (blueprint), e grava o arquivo .dot do grafo resultante está em~\url{https://github.com/ttm/vocabulario-participacao/blob/master/scripts/obsConferencias.py}. O RDF/XML está em \url{https://github.com/ttm/vocabulario-participacao/blob/master/rdf/obsConferencia.owl} e o Turtle em \url{https://github.com/ttm/vocabulario-participacao/blob/master/rdf/obsConferenciaDocsRes.ttl}. As imagens estão em~\url{https://github.com/ttm/vocabulario-participacao/raw/master/figs/obsConferencia.png},~\url{https://github.com/ttm/vocabulario-participacao/raw/master/figs/obsConferencia2.png},~\url{https://github.com/ttm/vocabulario-participacao/raw/master/figs/obsConferencia3.png}. O grafo em .dot (usado pelo está em
+
+O segundo conjunto é centrado nos documentos e nos resultados de conferência.  O script que sintetiza o OWL em RDF/XML e Turtle, sintetiza 3 imagens da rede de conceitos (blueprint), e grava o arquivo .dot do grafo resultante está em~\url{https://github.com/ttm/vocabulario-participacao/blob/master/scripts/obsConferencias.py}.
+
+% Fazer tabela para os links dos arquivos da OBS e VBS.
+
+\begin{table}[htpq!]
+\centering
+\caption{Tabela de arquivos da OBS e VBS.}
+\begin{tabular}{| p{6cm} | c | c | c | c | }\hline
+ descrição & script & RDF/XML & Turtle & diagramas ou listagens \\\hline
+vocabulário do material de referência enviado pela SNAS  & \ref{i:1} & \ref{i:2} & \ref{i:3} & \ref{i:4},~\ref{i:4_1},~\ref{i:5} \\\hline
+ontologia das conferências (Clovis) &~\ref{i:6}&~\ref{i:7}&~\ref{i:8}&~\ref{i:9},~\ref{i:10},~\ref{i:11} \\\hline
+vocabulário das conferências (Clovis) &~\ref{i:12}&~\ref{i:13}&~\ref{i:14}&~\ref{i:16},~\ref{i:17},~\ref{i:18} \\\hline
+\end{tabular}\label{eq:intervalos}
+\end{table}
+
+Links:
+{\scriptsize
+\begin{enumerate}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsDocumentacaoVBS.py}\label{i:1}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsDocumentacaoVBS.rdf}\label{i:2}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsDocumentacaoVBS.ttl}\label{i:3}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsDocumentacaoVBS.txt} \label{i:4}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsDocumentacaoVBSPodada.txt}\label{i:4_1}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsDocumentacaoVBSPalavras.txt}\label{i:5}
+
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/obsConferencias.py}\label{i:6}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsConferencia.owl}\label{i:7}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/obsConferencia.ttl}\label{i:8}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConferencia.png}\label{i:9}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConferencia.png}\label{i:10}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/figs/obsConferencia.png}\label{i:11}
+
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/scripts/vbsConferencias.py}\label{i:12}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsConferencia.rdf}\label{i:13}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/rdf/vbsConferencia.ttl}\label{i:14}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferencia.txt}\label{i:16}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferenciaPalavras.txt}\label{i:17}
+    \item \url{https://raw.githubusercontent.com/ttm/vocabulario-participacao/master/txt/vbsConferenciaPodada.txt}\label{i:18}
+\end{enumerate}
+}
+
+
+
 \subsection{Relatório de implementação das contribuições do Workshop dia 20/Out/2014, sobre a biblioteca (semântica de participação) social}
 \begin{figure}[h!]
   \centering
     \includegraphics[width=\textwidth,angle=270]{fotos/OuvidoriaLigia.jpg}
   \caption{Diagrama de Ouvidorias desenhado com o acompanhamento de especialista (Lígia).}
 \end{figure}
-\subsection{Materiais enviados pela equipe para referência}
-\subsection{PNPS}
+\subsection{PNPS}\label{ap:pnps}
+ e a própria PNPS.
 
 \section{Utilização dos dados linkados}
 
