@@ -64,7 +64,7 @@ Aporte de conhecimentos e tecnologias para especificação de vocabulário e fer
 
 
 \begin{abstract}
-Este documento descreve a alimentação com dados do Participa.br da nuvem de conhecimento de participação social. Não havia dados participativos brasileiros linkados, então a nuvem foi iniciada com a especificação ontológica e triplificação dos dados de duas outras instâncias: do AA, um sistema de compartilhamento de processos usado por programadores e midialivristas; e do Cidade Democrática, um portal participativo capitaneado pela sociedade civil. A triplificação do participa.br e sua ontológia (OPa) foram feitas no primeiro e segundo produtos desta consultoria. Este trabalho aponta melhoras nesta integração do Participa.br aos dados linkados.
+Este documento descreve a alimentação com dados do Participa.br da nuvem de conhecimento de participação social. Não havia dados participativos brasileiros linkados, então a nuvem foi iniciada com a especificação ontológica e triplificação dos dados de duas outras instâncias: do AA, um sistema de compartilhamento de processos usado por programadores e midialivristas; e do Cidade Democrática, um portal participativo capitaneado pela sociedade civil. A triplificação do Participa.br e sua ontológia (OPa) foram feitas no primeiro e segundo produtos desta consultoria. Este trabalho aponta melhoras nesta integração do Participa.br aos dados linkados, com revisão de algumas estruturas iniciadas nesta consultoria e com o fornecimento de contexto.
 {\bf Palavras-chave:} \PalavrasChave.
 \end{abstract}
 \newpage
@@ -74,30 +74,30 @@ Este documento descreve a alimentação com dados do Participa.br da nuvem de co
 O termo de referência desta consultoria explicita para o quinto produto: \emph{regras de extração de conteúdos da API do portal e suas ferramentas para alimentação de eventual/hipotética base/nuvem de conhecimento de participação social}. A API do portal é o endpoint SparQL (RESTful). As ``regras de extração de conteúdos'' são ditadas pela linguagem SparQL em si, dadas as ontologias e os dados triplificados. A ontologia do participa (OPa) foi desenvolvida no primeiro produto desta consultoria, a triplificação entregue como parte do segundo produto~\cite{repoProd1, repoProd2}. Desta forma, este produto pôde se concentrar em melhorar esta alimentação da nuvem de conhecimento de participação social. Em especial, esta nuvem de participação social linkada via critérios semânticos e RDF é ainda incipiente e praticamente inexistente no contexto brasileiro. Isso motivou o desenvolvimento de duas novas ontologias de participação social: da \emph{Autorregulação Algorítmica}, uma técnica de compartilhamento de processos; e do \emph{Cidade Democrática}. Todas as tecnologias são livres e os links dos repositórios e softwares utilizados estão nos Apêndices.
 
 \subsection{Contexto e importância da consultoria}
-O portal federal de participação social (Participa.br) está imerso no contexto de redes, transparência e tecnologias em nuvem. Esta consultoria visa instrumentalizar a comunidade participativa brasileira, em especial em torno do participa.br, para aproveitamento de nossas estruturas em rede, em especial através de processamento de linguagem natural, redes complexas e dados linkados (vocabulários, ontologias e RDF). Este produto chega depois da disponibilização dos dados do Participa.br via critérios semânticos, nos produtos 1 e 2~\cite{repoProd1,repoProd2}. Também depois da exposição de formas de observação e de recomendação de recursos via técnicas de processamento de linguagem natural e redes complexas, nos produtos 3 e 4~\cite{repoProd3,repoProd4}. Neste produto pudemos reforçar as frentes iniciadas com esta consultoria, embora a lista de afazeres seja muito mais extensa (um detalhamento está em ~\url{https://etherpad.mozilla.org/prod5}). O objeto do produto já havia sido alcançado com os produtos anteriores e o consultor escolheu melhorar a triplificação atual do Participa.br e contemplar outras instâncias para iniciar a nuvem de participação social. Outro avanço foi o desenvolvimento das ontologias e vocabulários para a biblioteca (digital e semântica) de participação social, este bastante afinado com a equipe do participa.br e outros andamentos da SNAS/SG-PR.
+O portal federal de participação social (Participa.br) está imerso no contexto de redes, transparência e tecnologias em nuvem. Esta consultoria visa instrumentalizar a comunidade participativa brasileira, em especial em torno do Participa.br, para aproveitamento de nossas estruturas em rede, principalmente através de processamento de linguagem natural, redes complexas e dados linkados (vocabulários, ontologias e RDF). Este produto chega depois da disponibilização dos dados do Participa.br via critérios semânticos, nos produtos 1 e 2~\cite{repoProd1,repoProd2}. Também depois da exposição de formas de observação e de recomendação de recursos via técnicas de processamento de linguagem natural e redes complexas, nos produtos 3 e 4~\cite{repoProd3,repoProd4}. Neste produto foram reforçadas as frentes desta consultoria, embora os afazeres elencados como pertinentes e importantes sejam muitos (um detalhamento está em ~\url{https://etherpad.mozilla.org/prod5}). O objeto do produto já havia sido alcançado com os produtos anteriores e o consultor escolheu melhorar a triplificação atual do Participa.br e contemplar outras instâncias para potencializar (ou mesmo iniciar) a nuvem de participação social. Outro avanço foi o desenvolvimento das ontologias e vocabulários para a biblioteca (digital e semântica) de participação social, este bastante afinado com a equipe do Participa.br e outros andamentos da SNAS/SG-PR.
 
-\subsection{Contexto e importância do Produto}
-Esta revisão da ontologia do participa.br, triplificação dos dados do portal, levantamento de dados linkados da sociedade civil (AA e Cidade Democrática) e levantamento ontológico e de vocabulários linkados de interesse da SNAS/SG-PR (OBS e VBS), proporcionam qualidade e contexto para os dados linkados do participa.br. Os dados são ditos ligados (linkados) pois estão em um formato com foco na interperabilidade, o ganho desta tecnologia é por vezes apontado como ``contexto para os dados''.
+\subsection{Contexto e importância do produto}
+Esta revisão da ontologia do Participa.br, triplificação dos dados do portal, levantamento de dados linkados da sociedade civil (AA e Cidade Democrática) e levantamento ontológico e de vocabulários linkados de interesse da SNAS/SG-PR (OBS e VBS), proporcionam qualidade e contexto para os dados linkados do Participa.br. Os dados são ditos ligados (linkados) pois estão em um formato com foco na interperabilidade, o ganho desta tecnologia é por vezes apontado como ``contexto para os dados''.
 
 Há também um ganho de articulação para o Participa.br, que promoveu o desenvolvimento de tecnologias livres de ponta, com padrões internacionais incentivados via tratados, governos e sociedade civil de diversas origens. Mesmo assim, a importância para a articulação nacional é maior, contemplando interesses federais e civis.
 
 \subsubsection{Objetivos}
 O objetivo principal do trabalho foi integrar o Participa.br na nuvem de dados participativos linkados. Objetivos secundários foram:
 \begin{itemize}
-    \item observar a incidência de outras ontologias de participação e dados triplificados de instâncias participativas.
+    \item Observar a incidência de outras ontologias de participação e de dados triplificados de outras instâncias participativas que não o Participa.br.
     \item Iniciar um repertório de dados participativos linkados brasileiros (\emph{bootstrap}).
-    \item Articular partes interessadas neste legado aberto, tanto especializada (Participa.br), quanto envolvidas (SNAS/SG-PR e sociedade civil com AA e Cidade Democrática).
+    \item Articular partes interessadas neste legado aberto, tanto especializada (Participa.br), quanto envolvidas (SNAS/SG-PR com OBS e VBS e sociedade civil com AA e Cidade Democrática).
     \item Apresentar para as partes interessadas utilidades e possibilidades das tecnologias de web semântica.
 \end{itemize}
 
 \subsubsection{Resultados esperados}\label{subsec:resp}
 Este trabalho auxiliou e deve continuar auxiliando a SNAS/SG-PR com respeito à biblioteca semântica e digital de participação social. A Ontologia da Biblioteca (semântica e digital de participação) Social, chamada OBS, e o Vocabulário da Biblioteca (semântica e digital de participação) Social, chamada VBS. Estas ontologias também devem facilitar a compreensão do funcionamento dos mecanismos e instâncias de participação social, tanto por iniciantes, como por gestores públicos ou acadêmicos especialistas, como apontaram alguns dos participantes do workshop realizado dia 20/10/2014.
 
-Os dados do Participa.br já servem para mecanismos de recomendação de recursos, apresentados no produto 4 desta mesma consultoria~\cite{repoProd4}. Estes dados linkados estão já sendo disponibilizados por estruturas federais, mediante articulação da equipe do Participa.br. A ontologia do participa (OPa) contempla uma ontologia da concepção abstrata de portais participativos pela equipe do Participa.br. Com este produto, também contempla uma ontologia para o portal Participa.br, que possui classes e propriedades internas adequadas para representação dos dados do Participa.br. Estes desenvolvimentos podem ser aproveitados para proposições precisas de funcionamento do Participa.br, compartilhadas com relativa facilidade via diagramas.
+Os dados do Participa.br já servem para mecanismos de recomendação de recursos, apresentados no produto 4 desta mesma consultoria~\cite{repoProd4}. Estes dados linkados estão já sendo disponibilizados por estruturas federais, mediante articulação da equipe do Participa.br. A ontologia do participa (OPa) contempla uma ontologia da concepção abstrata de portais participativos pela equipe do Participa.br. Com este produto, a OPa também contempla uma ontologia para o portal Participa.br, que possui classes e propriedades internas adequadas para representação dos dados do Participa.br. Estes desenvolvimentos podem ser aproveitados para proposições precisas de funcionamento do Participa.br, compartilhadas com relativa facilidade via diagramas e vocabulários em texto simples.
 
 Os dados e ontologia do portal Cidade Democrática devem ser aproveitados pela comunidade relacionada ao portal. Na realização destas triplificações, foi iniciado um método de construção de ontologias orientado aos dados, útil para qualquer portal que queira triplificar seus dados em RDF e usufruir de uma ontologia.
 
-Os dados e ontologia do AA estão em uso pelo labMacambira.sf.net. Continuará permitindo experimentações rápidas, dada a simplicidade da ontologia. Há implementações do AA planejadas para fazerem uso direto do endpoint SparQL para realizar updates com mensagens novas.
+Os dados e ontologia do AA estão em uso pelo labMacambira.sf.net. Continuará permitindo experimentações rápidas, dada a simplicidade da ontologia. Há implementações do AA planejadas para fazerem uso direto do endpoint SparQL para realizar updates com mensagens no momento de envio.
 
 Estas instâncias em conjunto possibilitam análises comparativas, utilidades multiplataforma e observação de qualidades de desenvolvimentos diferentes.
 
@@ -110,9 +110,6 @@ A SGPR pode desenvolver a capacidade institucional de compartilhar seus processo
 Outra capacidade institucional que a SGPR pode desenvolver é de capitanear desenvolvimentos de tecnologias livres e abertura de dados.
 
 \section{Desenvolvimento}\label{sec:dev}
-
-
-espaço onde o consultor vai construir suas ideias. O consultor tem a liberdade para organizá-lo em tópicos, itens e sub-itens. 
 
 \subsection{Comparação entre planejamento inicial e resultados alcançados}
 Este produto foi idealizado com bastante coisa, para revisar, contextualizar e efetivar os desenvolvimentos apontados nos produtos anteriores. Um detalhamento está em \url{https://etherpad.mozilla.org/prod5}. A maior parte deste trabalho, a OBS e a VBS, não estava prevista. Mesmo assim, algumas das metas foram atingidas:
@@ -143,12 +140,12 @@ Este trabalho foi feito em imersão, resultando em diversos artefatos conceituai
 \subsection{Etapas de desenvolvimento anteriores a este produto}
 \subsubsection{Sistematização ontológica da participação online}
 Através de estudos e reuniões presenciais e online, a Ontologia de Participação Social (OPS) foi revisada~\cite{OPS} e a Ontologia do Participa.br (OPA) foi feita~\cite{OPA}.
-\subsubsection{Triplificação dos dados do participa.br}
+\subsubsection{Triplificação dos dados do Participa.br}
 Feito um script para triplificar os dados do Participa.br, ou seja, para o enriquecimento semântico e escrita em RDF dos dados em Postgresql da instância Noosfero do Participa.br~\cite{triplifica}.
 \subsubsection{Levantamento do endpoint SparQL}\label{sec:sfoo}
 Para uso dos dados triplificados, pode-se recorrer a diversos métodos de leitura e disponibilização. Um método-chave é a disponibilização dos dados rdf (\emph{triple store}) em um \emph{endpoint sparql}. Para os fins de testes, pesquisa e usos leves, está disponibilizado um endpoint SparQL em servidores da USP~\cite{endpoint}.
 \subsubsection{Análises iniciais, modelos}
-Análises dos dados do participa.br foram abertas no IPython Notebook, com ênfase no texto produzido e nas redes formadas~\cite{repoProd3}.
+Análises dos dados do Participa.br foram abertas no IPython Notebook, com ênfase no texto produzido e nas redes formadas~\cite{repoProd3}.
 \subsubsection{Sistema de recomendação de participante e recursos}
 O quarto produto desta consultoria explicitou como recomendar amigos, participantes, artigos, comentários, ou seja, recursos em geral, a partir de recursos de referência. Assim, pode-se recomendar para um usuário possíveis amigos, assim como possíveis opositores ou pessoas que tem traços de vocabulário. Outro exemplo é a recomendação de artigos, dado um comentário ou postagem como referência.
 
@@ -165,6 +162,7 @@ Em essência, o sistema de recomendação de recursos explicitado e sugerido pel
 \subsubsection{Triplificação do AA e construção da Ontologiaa}
 \subsubsection{Triplificação dos dados do Cidade Democrática e construção da OCD}
 \subsubsection{Desenvolvimento da OBS e VBS}
+\subsubsection{Revisão da triplificação de dados do Participa.br e da OPa}
 \subsection{Justificativa, descrição detalhada e formas de aplicação do método}
 Os dados em RDF e as organizações ontológicas são tecnologias recomendadas, com boa aceitação e em expansão com foco na interoperabilidade e na organização eficiente de conceitualizações.
 
@@ -175,7 +173,7 @@ Para a OBS e VBS, foram feitas entrevistas, um workshop para receber contribuiç
 Nos outros casos, os dados são triplificados, as classes e propriedades utilizadas são organizadas ontologicamente. Este foi o método mais apropriado para as instâncias virtuais, pois, como os experimentos iniciais com a OPa e a triplificação dos dados do Participa.br mostratam, os dados do portal apresentam várias relações que não são tratadas diretamente pela comunidade envolvido.
 
 \subsection{Justificativa, descrição detalhada e acesso das fontes}
-No caso em que as fontes foram os dados das instâncias, estas não estão acessíveis diretamente. Por exemplo: os dados sobre os quais os portais participa.br e Cidade Democrática operam não estão disponíveis diretamente, apenas através dos dados triplificados ou através da equipe destes portais.
+No caso em que as fontes foram os dados das instâncias, estas não estão acessíveis diretamente. Por exemplo: os dados sobre os quais os portais Participa.br e Cidade Democrática operam não estão disponíveis diretamente, apenas através dos dados triplificados ou através da equipe destes portais.
 
 No caso da OBS e VBS, as fontes foram entrevistas e documentos de referência, explicitados no Apêndice.
 
@@ -209,7 +207,7 @@ As organizações ontológicas e dados triplificados facilitam análises periód
 
 
 \section{Agradecimentos}
-O consultor Renato Fabbri agradece ao Joenio Costa pelo template em \LaTeX\ para os produtos. Agradece a todos os conhecedores entrevistados, pois em muito ajudaram na realização deste produto. Agradece aos supervisores do trabalho realizado em torno do participa.br: Ricardo Poppi e Ronald Costa. Agradece ao labMacambira.sf.net e todas as comunidades de software e cultura livre que compõe esta contribuição.
+O consultor Renato Fabbri agradece ao Joenio Costa pelo template em \LaTeX\ para os produtos. Agradece a todos os conhecedores entrevistados, pois em muito ajudaram na realização deste produto. Agradece aos supervisores do trabalho realizado em torno do Participa.br: Ricardo Poppi e Ronald Costa. Agradece ao labMacambira.sf.net e todas as comunidades de software e cultura livre que compõe esta contribuição.
 \newpage
 \bibliography{bibliografia}
 \newpage
@@ -220,7 +218,7 @@ O consultor Renato Fabbri agradece ao Joenio Costa pelo template em \LaTeX\ para
 \newpage
 %\input{listadeanexos.tex}
 \appendix
-\section{Ontologias de instâncias participativas online potencialmente relacionáveis ao participa.br}
+\section{Ontologias de instâncias participativas online potencialmente relacionáveis ao Participa.br}
 \subsection{Ontologia do AA (Ontologiaa)}\label{ap:aa}
 Como uma forma de integrar o Participa.br em uma nuvem de conhecimento participativo, foi levantada a Ontologiaa, exposta na Figura~\ref{fig:diaa}. O AA é uma técnica de compartilhamento de processos usada principalmente no labMacambira.sf.net. A simplicidade das implementações atuais, e a pertinência do registro e compartilhamento de processos, fizeram com que esta fosse o primeiro desenvolvimento efetivo deste último produto.
 
@@ -290,7 +288,7 @@ Esta ontologia está no Webprotege disponibilizado pela Stanford, no link: \url{
 
 
 \section{Revisão da OPa}\label{ap:opa}
-O primeiro produto desta consultoria envolveu o levantamento de uma ontologia para o Participa, batizada de OPa. Isso ocorreu antes de serem triplificados os dados do participa.br e antes até mesmo do consultor ter acesso a estes dados. Isso foi bastante proveitoso, pois obrigou a equipe do participa a conceber uma ontologia genérica para portais participativos, centrada nos conceitos de participante, portal participativo e mecanismo participativo. Estes módulos estarão preservados e constam como legado intelectual, uma contribuição da equipe do participa.br na conceituação da participação social online.
+O primeiro produto desta consultoria envolveu o levantamento de uma ontologia para o Participa, batizada de OPa. Isso ocorreu antes de serem triplificados os dados do Participa.br e antes até mesmo do consultor ter acesso a estes dados. Isso foi bastante proveitoso, pois obrigou a equipe do participa a conceber uma ontologia genérica para portais participativos, centrada nos conceitos de participante, portal participativo e mecanismo participativo. Estes módulos estarão preservados e constam como legado intelectual, uma contribuição da equipe do Participa.br na conceituação da participação social online.
 
 Já depois de feitas estas ontologias do AA e do Cidade Democrática, e depois de ter feito toda a OBS e VBS, atingimos um paradigma apropriado para triplificação dos dados e organização conceitual. Em resumo:
 \begin{itemize}
