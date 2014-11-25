@@ -234,7 +234,7 @@ O tamanho reduzido da ontologia permitiu que vários testes fossem feitos. Em es
 
 As inferências foram testadas com o jena/fuseki, com bons resultados. Tanto as inferências relacionadas às hiperonímias (superclasses e super propriedades, diretamente do rdfs) quanto inferências mais elaboradas (ligadas ao padrão OWL) foram satisfatórias. O revés é que qualquer query SparQL que demora milissegundos, mesmo que não envolva inferências para sua resposta, demora segundos quando há uma máquina de inferências ativa. A solução, portanto, parece ser ainda de realizar estas inferências offline e disponibilizar todas as triplas resultantes no endpoint.
 
-Todos os desenvolvimentos desta ontologia e a triplificação de dados do AA em MySQL e MongoDB estão em: \url{https://github.com/ttm/aa01/tree/master/rdf}. Estes dados estão disponíveis no endpoint sparql (fuseki/jena) para uso conforme \url{script ipython}. Há interfaces úteis para explorar/expor os dados ligados ao AA. Em especial, estão derreferenciáveis, como na Figura~\ref{fig:aashout}.
+Todos os desenvolvimentos desta ontologia e a triplificação de dados do AA em MySQL e MongoDB estão em: \url{https://github.com/ttm/aa01/tree/master/rdf}. Estes dados estão disponíveis no endpoint sparql (fuseki/jena) para uso conforme script ipython. Há interfaces úteis para explorar/expor os dados ligados ao AA. Em especial, estão derreferenciáveis, como na Figura~\ref{fig:aashout}.
 
 \begin{figure}[h!]
   \centering
@@ -299,11 +299,11 @@ Já depois de feitas estas ontologias do AA e do Cidade Democrática, e depois d
     \item Liberação da ontologia com \emph{blueprints} em imagens. Acréscimo das restrições de classe, e axiomas de pripriedade na medida em que houver utilidade para não enrijecer a estrutura.
 \end{itemize}
 
-Neste contexto, além da ontologia disponível no primeiro produto desta consultoria, a OPa conta com as estruturas orientadas aos dados do portal, apresentadas nas imagens~\ref{fig:},~\ref{fig:},~\ref{fig:}.
+Neste contexto, além da ontologia disponível no primeiro produto desta consultoria, a OPa conta com as estruturas orientadas aos dados do portal. Este novo módulo está em implementação no momento de entrega deste produto, e poderá ser observado na URL \url{https://github.com/ttm/pnud5/tree/master/opa}.
 
 \section{Revisão da Triplificação do Participa.br}
-O script de triplificação disponibilizado no produto 2 foi adaptado para o paradigma explicitado no Apêndice~\ref{ap:ropa}. Além disso,
-foram acrescentadas à triplificação algumas informações adicionais de usuários e das postagens em si. O script de triplificação, revisado, está em: \url{http://github.com/ttm/pnud5/scripts/triplificaParticipa22112014.py}.
+O script de triplificação disponibilizado no produto 2 foi adaptado para o paradigma explicitado no Apêndice~\ref{ap:opa}. Além disso,
+foram acrescentadas à triplificação algumas informações adicionais de usuários e das postagens em si. O script de triplificação está sendo revisado e estará em: \url{http://github.com/ttm/pnud5/opa/triplificaParticipaB.py}.
 \newpage
 \section{Ontologia e Vocabulário da Biblioteca Social (OBS e VBS)}
 Por ocasião do levantamento da Biblioteca (digital e semântica de participação) Social, por iniciativa da SNAS/SG-PR, e com esforços de diversos parceiros, o consultor iniciou uma sequência de entrevistas individuais. Um workshop foi feito na SGPR no dia 20/10/2014 para receber contribuições de parceiros diversos. Além das entrevistas individuais e do workshop, foram consideradas documentações de referência produzidas sobre e pelos mecanismos e instancias de participação social. A PNPS foi considerada separadamente, dada a informatividade do decreto. Todo o processo foi permeado de troca de mensagens entre o consultor e equipes do Particpa.br, UnB, IPEA, SNAS e MP.
