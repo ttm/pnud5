@@ -112,7 +112,7 @@ Outra capacidade institucional que a SGPR pode desenvolver é de capitanear dese
 \section{Desenvolvimento}\label{sec:dev}
 
 \subsection{Comparação entre planejamento inicial e resultados alcançados}
-Este produto foi idealizado com bastante coisa, para revisar, contextualizar e efetivar os desenvolvimentos apontados nos produtos anteriores. Um detalhamento está em \url{https://etherpad.mozilla.org/prod5}. A maior parte deste trabalho, a OBS e a VBS, não estava prevista. Mesmo assim, algumas das metas foram atingidas:
+Este produto foi idealizado com bastante coisa, para revisar, contextualizar e efetivar os desenvolvimentos apontados nos produtos anteriores. Um detalhamento está em \url{https://etherpad.mozilla.org/prod5}. A maior parte deste trabalho, a OBS e a VBS, não estava prevista. Mesmo assim, algumas das metas iniciais foram atingidas:
 \begin{itemize}
     \item A ontologia do aa (Ontologiaa) foi feita em OWL, com relações de hiperclasses e hiperpropriedades. Os dados do AA foram triplificados, tanto os do MySQL quanto os do MongoDB. A comunidade já está se movendo em direção ao desenvolvimento de interfaces que atualizam as triplas no momento do envio das mensagens, via update do SparQL. A Ontologiaa foi usada para testes de inferências em tempo de real no endpoint Jena. Os resultados foram otimistas, provaram que é possível contar com as inferências em tempo de execução, mas não para um portal, pois as queries feitas chegaram a demorar alguns segundos para resposta.
     \item A ontologia do Cidade Democrática foi feita em OWL, e os dados do portal foram triplificados.
@@ -143,7 +143,7 @@ Através de estudos e reuniões presenciais e online, a Ontologia de Participaç
 \subsubsection{Triplificação dos dados do Participa.br}
 Feito um script para triplificar os dados do Participa.br, ou seja, para o enriquecimento semântico e escrita em RDF dos dados em Postgresql da instância Noosfero do Participa.br~\cite{triplifica}.
 \subsubsection{Levantamento do endpoint SparQL}\label{sec:sfoo}
-Para uso dos dados triplificados, pode-se recorrer a diversos métodos de leitura e disponibilização. Um método-chave é a disponibilização dos dados rdf (\emph{triple store}) em um \emph{endpoint sparql}. Para os fins de testes, pesquisa e usos leves, está disponibilizado um endpoint SparQL em servidores da USP~\cite{endpoint}.
+Para uso dos dados triplificados, pode-se recorrer a diversos métodos de leitura e disponibilização. Um método-chave é a disponibilização dos dados RDF (\emph{triple store}) em um \emph{endpoint sparql}. Para os fins de testes, pesquisa e usos leves, está disponibilizado um endpoint SparQL em servidores de pesquisa da USP~\cite{endpoint}.
 \subsubsection{Análises iniciais, modelos}
 Análises dos dados do Participa.br foram abertas no IPython Notebook, com ênfase no texto produzido e nas redes formadas~\cite{repoProd3}.
 \subsubsection{Sistema de recomendação de participante e recursos}
@@ -160,33 +160,40 @@ Em essência, o sistema de recomendação de recursos explicitado e sugerido pel
 
 \subsection{Etapas de desenvolvimento deste produto}
 \subsubsection{Triplificação do AA e construção da Ontologiaa}
+Com especial atenção a relações de superclasse e super propriedade, permitiu diversos testes dada a simplicidade do sistema.
 \subsubsection{Triplificação dos dados do Cidade Democrática e construção da OCD}
+Com o desenvolvimento de um método de construção de ontologias voltado aos dados.
 \subsubsection{Desenvolvimento da OBS e VBS}
+Através de entrevistas, workshop e materiais de referência, para uso na Biblioteca (semântica e digital de participação) social.
+\subsubsection{Estudo de navegação de dados linkados}
+Por onde foi iniciado o uso do Pubby e do Webprotege apontado nos Apêndices.
 \subsubsection{Revisão da triplificação de dados do Participa.br e da OPa}
+Com o paradigma de namespace interno, ampliação dos dados triplificados inicialmente e módulo adicional da OPa para os dados do Participa.br.
+
 \subsection{Justificativa, descrição detalhada e formas de aplicação do método}
-Os dados em RDF e as organizações ontológicas são tecnologias recomendadas, com boa aceitação e em expansão com foco na interoperabilidade e na organização eficiente de conceitualizações.
+Os dados em RDF e as organizações ontológicas são tecnologias recomendadas, em expansão, com boa aceitação, interoperabilidade e organização de conceitualizações.
 
-O método usado neste trabalho foi um para as ontologias e triplificação do Cidade Democrática, do AA e do Participa.br. Outro para as Ontologia e Vocabulario da Biblioteca (semântica e digital de participação) SoCial (OBS e VBS).
+O método usado neste trabalho foi um para as ontologias e triplificação do Cidade Democrática, do AA e do Participa.br. Outro para as Ontologia e Vocabulário da Biblioteca (semântica e digital de participação) Social (OBS e VBS).
 
-Para a OBS e VBS, foram feitas entrevistas, um workshop para receber contribuições, estudo detalhado de documentações e uma consideração especial da PNPS. Este foi o método ocorrente em articulação com a SNAS/SG-PR. Com o número de pessoas envolvidas, o método não foi idealizado de antemão, mas foi moldado segundo as necessidades e possibilidades encontradas no processo.
+Para a OBS e VBS, foram feitas entrevistas, um workshop para receber contribuições, estudo detalhado de documentações e uma consideração especial do Decreto 8.243. Este foi o método ocorrente em articulação com a SNAS/SG-PR. Com o número de pessoas envolvidas, o método não foi idealizado de antemão, mas foi moldado segundo as necessidades e possibilidades encontradas no processo.
 
-Nos outros casos, os dados são triplificados, as classes e propriedades utilizadas são organizadas ontologicamente. Este foi o método mais apropriado para as instâncias virtuais, pois, como os experimentos iniciais com a OPa e a triplificação dos dados do Participa.br mostratam, os dados do portal apresentam várias relações que não são tratadas diretamente pela comunidade envolvido.
+Nos outros casos, os dados são triplificados, as classes e propriedades utilizadas na triplificação são organizadas ontologicamente. Este foi o método mais apropriado para as instâncias virtuais, pois, como os experimentos iniciais com a OPa e a triplificação dos dados do Participa.br mostratam, os dados do portal apresentam várias relações que não são tratadas diretamente pela comunidade envolvida, resultando em uma aplicação incompleta da ontologia e uma perda grande dos dados do portal caso a triplificação seja mantida dentro do escopo da ontologia.
 
 \subsection{Justificativa, descrição detalhada e acesso das fontes}
 No caso em que as fontes foram os dados das instâncias, estas não estão acessíveis diretamente. Por exemplo: os dados sobre os quais os portais Participa.br e Cidade Democrática operam não estão disponíveis diretamente, apenas através dos dados triplificados ou através da equipe destes portais.
 
-No caso da OBS e VBS, as fontes foram entrevistas e documentos de referência, explicitados no Apêndice.
+No caso da OBS e VBS, as fontes foram entrevistas, um workshopt e documentos de referência, explicitados no Apêndice.
 
 \section{Resultados alcançados}
 Foram construídas a OBS e VBS para a biblioteca de participação social. Formatos adicionais foram desenvolvidos para visualização dos vocabulários em texto simples a pedido da consultora Carmen Romcy. Scripts foram escritos para construção de aquivo XML lido pelo DSpace. Exportações do Tematres foram feitas locais para entregar para utilização pela SNAS. Foram feitas as ontologias do AA e do Cidade Democrática e os dados destas instâncias foram triplificados. Experimentos foram feitos com as máquinas de inferência do Jena através do Fuseki. Uma interface foi levantada para derreferenciar todas as classes, propriedades e instâncias que possuem o prefixo \url{http://purl.org/socialparticipation/}. As ontologias foram disponibilizadas no Webprotege da Stanford para receberem comentários e para desenvolvimento coletivo. A triplificação dos dados do Participa.br foi revisada, resultando em um módulo adicional para a OPa. 
 
-Todas os desenvolvimentos estão em repositórios abertos.
+Todas os desenvolvimentos estão em repositórios abertos e detalhados nos Apêndices.
 \subsection{Usos dos resultados}\label{sec:uso}
-Estes resultados estão em uso pelas comunidades envolvidas. Há previsões de que este arcabouço seja usado para análises periódicas e comparativas. Os resultados aqui apresentados devem impulsionar a apropriação das tecnologias semânticas, verbais e em rede no Brasil, tanto pela sociedade civil quanto pelo Estado.
+Estes resultados estão em uso pelas comunidades envolvidas. Há previsões de que este arcabouço seja usado para análises periódicas e comparativas. Os resultados aqui apresentados devem impulsionar a apropriação das tecnologias semânticas, verbais e em rede no Brasil, tanto pela sociedade civil quanto pelo Estado. A SNAS está fazendo alguns usos da OBS e VBS para a biblioteca social e provavelmente será intensificado este processo.
 
 \section{Conclusão}
-As novas ontologias e roteiros de triplificação integram mais profundamente o Participa.br, através de seus dados e organização ontológica, 
-tanto na estrutura do Estado, com a OBS e VBS, quanto nas estruturas da sociedade civil. com A Ontologiaa, OCD, e as triplificações dos dados do AA e Cidade Democrática.
+As novas ontologias e roteiros de triplificação integram mais profundamente o Participa.br através de seus dados e organização ontológica, 
+tanto na estrutura do Estado, com a OBS e VBS, quanto nas estruturas da sociedade civil, com a Ontologiaa, OCD, e as triplificações dos dados do AA e Cidade Democrática.
 
 A qualidade dos desenvolvimentos foi verificada através da disponibilização no endpoint SparQL, scripts que fazem consulta aos endpoint, inteface para derreferenciamento (pubby), visualizações em diagramas e listagens e disponibilização no Webprotege.
 
@@ -200,10 +207,10 @@ Um fenômeno social envolvido no vínculo do consultor, que talvez deva ser cons
 \subsection{Impacto do produto para a elaboração, gestão e/ou avaliação de políticas públicas de participação social}
 Este produto pode impactar as políticas públicas através da organização do conhecimento, que facilitará a obtenção de informações mais expressivas.  Outro impacto previsto é relacionado à transparência, pois os dados linkados, além de abertos, está em constante conexão com o legado humano de dados linkados. A avaliação de políticas públicas contará com relatórios comparativos e periódicos, potencialmente automatizados, que instrumentalizarão os gestores. A eficiência e pertinência dos desenvolvimentos aqui apresentados devem colaborar substancialmente para uma consideração técnica mais profunda por parte dos gestores públicos, mas também de toda a sociedade.
 
-A consideração de instâncias civís (inicialmente através da OCD e Ontologiaa) e dos mecanismos e instâncias de participação social (OBS e VBS) tem como um dos propósitos principais impactar diretamente o gestor público com a disponibilização de informações navegáveis, interoperáveis e enriquecidas semanticamente.
+A consideração de instâncias civís (inicialmente através da OCD e Ontologiaa), do Participa.br (OPa) e dos mecanismos e instâncias de participação social (OBS e VBS) tem como um dos propósitos principais impactar diretamente o gestor público com a disponibilização de informações navegáveis, interoperáveis e enriquecidas semanticamente.
 
 \subsection{Impacto no público-alvo das políticas públicas}
-As organizações ontológicas e dados triplificados facilitam análises periódicas, comparativas, recomendações de recursos, navegação de recursos e apreensão das informações relacionadas. Assim, há um empoderamento previsto do gestor e do cidadão interessado. Ao mesmo tempo, a transparência é reforçada. A apropriação das tecnologias em rede, em especial as ligadas ao processamento de linguagem natural, redes complexas e dados linkados, é potencializada com a disponibilização das tecnologias livres desenvolvidas nesta consultoria. Os vínculos e apoios do PNUD e da SGPR são eficientes para sinalizar ao gestor público e ao cidadão que estas tecnologias são eficientes e devem ser apropriadas pela sociedade.
+As organizações ontológicas e dados triplificados facilitam análises periódicas, comparativas, recomendações de recursos, navegação de recursos e apreensão das informações relacionadas. Assim, há um empoderamento previsto do gestor e do cidadão interessado. Ao mesmo tempo, a transparência é reforçada. A apropriação das tecnologias em rede, em especial as ligadas ao processamento de linguagem natural, redes complexas e dados linkados, é potencializada com a disponibilização das tecnologias livres desenvolvidas nesta consultoria. Os vínculos e apoios do PNUD e da SGPR são eficientes para sinalizar ao gestor público e ao cidadão que estas tecnologias são proveitosas e devem ser apropriadas pela sociedade.
 
 
 \section{Agradecimentos}
