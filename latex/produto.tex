@@ -102,17 +102,45 @@ Os dados e ontologia do AA estão em uso pelo labMacambira.sf.net. Continuará p
 Estas instâncias em conjunto possibilitam análises comparativas, utilidades multiplataforma e observação de qualidades de desenvolvimentos diferentes.
 
 \subsubsection{Caráter inovador}
-Os dados linkados em RDF estão em uso bastante difundido por grandes corporações e alguns setores governamentais de alguns países. A disponibilização de dados cinco estrelas, com as tecnologias de ponta para ontologias e vocabulário (OWL e SKOS) é já de cosiderável inovação. A triplificação de dados de instâncias participativas adicionais
+Os dados linkados em RDF estão em uso bastante difundido por grandes corporações e alguns setores governamentais de alguns países. A disponibilização de dados cinco estrelas, com as tecnologias de ponta para ontologias e vocabulário (OWL e SKOS) é já de cosiderável inovação. A triplificação de dados de instâncias participativas adicionais, para iniciar uma nuvem de dados participativos, é de caráter inovador explícito.
 
-destacar como este trabalho poderá contribuir suprir uma lacuna de conhecimento e/ou para desenvolver determinada a capacidade institucional da SG/PR.
+O trabalho pode contribuir para suprir a lacuna de conhecimento que existe sobre as instâncias e mecanismos de participação social. Vários dos especialistas apontaram a falta de formalização destes processos, cabendo muitas vezes aos estudiosos, que garimpam os materiais produzidos entregar sistematizações.
+
+A SGPR pode desenvolver a capacidade institucional de compartilhar seus processos, documentos, relatórios, em tecnologias que priorizam a interoperabilidade, facilitando suas atividades no poder federal, com drásticos aumentos na documentação enquanto a burocracia é minimizada.
+Outra capacidade institucional que a SGPR pode desenvolver é de capitanear desenvolvimentos de tecnologias livres e abertura de dados.
+
 \section{Desenvolvimento}\label{sec:dev}
+
+
 espaço onde o consultor vai construir suas ideias. O consultor tem a liberdade para organizá-lo em tópicos, itens e sub-itens. 
 
-demonstrar que o produto entregue corresponde ao que foi solicitado no termo de referência, por meio de:
-4. Análise sobre os resultados esperados na etapa de planejamento do Produto e os resultados alcançados ao final do Produto.
+\subsection{Comparação entre planejamento inicial e resultados alcançados}
+Este produto foi idealizado com bastante coisa, para revisar, contextualizar e efetivar os desenvolvimentos apontados nos produtos anteriores. Um detalhamento está em \url{https://etherpad.mozilla.org/prod5}. A maior parte deste trabalho, a OBS e a VBS, não estava prevista. Mesmo assim, algumas das metas foram atingidas:
+\begin{itemize}
+    \item A ontologia do aa (Ontologiaa) foi feita em OWL, com relações de hiperclasses e hiperpropriedades. Os dados do AA foram triplificados, tanto os do MySQL quanto os do MongoDB. A comunidade já está se movendo em direção ao desenvolvimento de interfaces que atualizam as triplas no momento do envio das mensagens, via update do SparQL. A Ontologiaa foi usada para testes de inferências em tempo de real no endpoint Jena. Os resultados foram otimistas, provaram que é possível contar com as inferências em tempo de execução, mas não para um portal, pois as queries feitas chegaram a demorar alguns segundos para resposta.
+    \item A ontologia do Cidade Democrática foi feita em OWL, e os dados do portal foram triplificados.
+    \item A revisão da triplificação do Participa.br foi estudada e está sendo implementada no momento de entrega deste produto. Um novo módulo da OPa é fruto desta triplificação, relacionando diretamente a ontologia à versão atual dos dados do portal.
+    \item Foi feito um estudo de navegação de dados, pelo qual foi efetivada a derreferenciação de todas as ontologias e triplificações com URIs que começam com \url{http://purl.org/socialparticipation/}:
+\begin{itemize}
+    \item \url{http://purl.org/socialparticipation/opa}
+    \item \url{http://purl.org/socialparticipation/ops}
+    \item \url{http://purl.org/socialparticipation/vbs}
+    \item \url{http://purl.org/socialparticipation/obs}
+    \item \url{http://purl.org/socialparticipation/aa}
+    \item \url{http://purl.org/socialparticipation/ocd}
+\end{itemize}
+\end{itemize}
+
+Algumas metas adicionais foram atingidas, não previstas inicialmente:
+\begin{itemize}
+    \item Um método foi desenvolvido para construção de ontologia orientada aos dados. O método foi utilizado para a construção da Ontologia do Cidade Democrática, com todos os axiomas de propriedade e restrições de classe apresentados pelos dados.
+    \item Testes sobre as máquinas de inferência do Jena foram feitos, constatando tempos de execução de alguns segundos, que devem ser considerados. Além disso, as máquinas de inferência adicionaram segundos até mesmo às buscas que não precisaram de inferência. Outro fato constatado é a diferença, também de alguns segundos, entre o uso de máquinas de inferência de complexidade diferente (por exemplo: queries com inferências de super classes e super propriedades RDFS demoram metade das queries com inferências em OWL).
+    \item Foram desenvolvidas a Ontologia e o Vocabulário da Biblioteca Social (OBS, VBS), com entrevistas, workshop para receber contribuições, estudos de documentos específicos e consideração especial do Decreto 8.243.
+\end{itemize}
+
+Este trabalho foi feito em imersão, resultando em diversos artefatos conceituais e tecnológicos. Os links apresentados neste trabalho certamente levam a derivados e produtos menores ou mais áridos tecnicamente.
 
 \subsection{Etapas de desenvolvimento anteriores a este produto}
-Descrição detalhada das etapas de desenvolvimento do Produto
 \subsubsection{Sistematização ontológica da participação online}
 Através de estudos e reuniões presenciais e online, a Ontologia de Participação Social (OPS) foi revisada~\cite{OPS} e a Ontologia do Participa.br (OPA) foi feita~\cite{OPA}.
 \subsubsection{Triplificação dos dados do participa.br}
@@ -122,9 +150,34 @@ Para uso dos dados triplificados, pode-se recorrer a diversos métodos de leitur
 \subsubsection{Análises iniciais, modelos}
 Análises dos dados do participa.br foram abertas no IPython Notebook, com ênfase no texto produzido e nas redes formadas~\cite{repoProd3}.
 \subsubsection{Sistema de recomendação de participante e recursos}
+O quarto produto desta consultoria explicitou como recomendar amigos, participantes, artigos, comentários, ou seja, recursos em geral, a partir de recursos de referência. Assim, pode-se recomendar para um usuário possíveis amigos, assim como possíveis opositores ou pessoas que tem traços de vocabulário. Outro exemplo é a recomendação de artigos, dado um comentário ou postagem como referência.
+
+Em essência, o sistema de recomendação de recursos explicitado e sugerido pelo consultor é um enriquecimento na navegação dos dados que:
+\begin{itemize}
+    \item Utiliza técnicas de Processamento de Linguagem Natural e de Redes Complexas e técnicas híbridas.
+    \item Explicita os critérios utilizados para a recomendação.
+    \item Entrega os algorítmos utilizados em interfaces para testes, como o IPython.
+    \item As recomendações são feitas via um recurso de referência, um tipo de recurso a ser recomendado, um método de recomendação. A maioria dos métodos aceita também uma polarização: similaridade ou dissimilaridade.
+\end{itemize}
+
 \subsection{Etapas de desenvolvimento deste produto}
+\subsubsection{Triplificação do AA e construção da Ontologiaa}
+\subsubsection{Triplificação dos dados do Cidade Democrática e construção da OCD}
+\subsubsection{Desenvolvimento da OBS e VBS}
 \subsection{Justificativa, descrição detalhada e formas de aplicação do método}
+Os dados em RDF e as organizações ontológicas são tecnologias recomendadas, com boa aceitação e em expansão com foco na interoperabilidade e na organização eficiente de conceitualizações.
+
+O método usado neste trabalho foi um para as ontologias e triplificação do Cidade Democrática, do AA e do Participa.br. Outro para as Ontologia e Vocabulario da Biblioteca (semântica e digital de participação) SoCial (OBS e VBS).
+
+Para a OBS e VBS, foram feitas entrevistas, um workshop para receber contribuições, estudo detalhado de documentações e uma consideração especial da PNPS. Este foi o método ocorrente em articulação com a SNAS/SG-PR. Com o número de pessoas envolvidas, o método não foi idealizado de antemão, mas foi moldado segundo as necessidades e possibilidades encontradas no processo.
+
+Nos outros casos, os dados são triplificados, as classes e propriedades utilizadas são organizadas ontologicamente. Este foi o método mais apropriado para as instâncias virtuais, pois, como os experimentos iniciais com a OPa e a triplificação dos dados do Participa.br mostratam, os dados do portal apresentam várias relações que não são tratadas diretamente pela comunidade envolvido.
+
 \subsection{Justificativa, descrição detalhada e acesso das fontes}
+No caso em que as fontes foram os dados das instâncias, estas não estão acessíveis diretamente. Por exemplo: os dados sobre os quais os portais participa.br e Cidade Democrática operam não estão disponíveis diretamente, apenas através dos dados triplificados ou através da equipe destes portais.
+
+No caso da OBS e VBS, as fontes foram entrevistas e documentos de referência, explicitados no Apêndice.
+
 \section{Resultados alcançados}
 \subsection{Usos dos resultados}\label{sec:uso}
 \section{Conclusão}
