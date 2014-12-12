@@ -293,9 +293,21 @@ Esta ontologia está no Webprotege disponibilizado pela Stanford, no link: \url{
   \caption{Figura geral da ontologia \texttt{ocd}, fruto do método de especificação de ontologias orientado aos dados. Para facilitar visualização, visite as imagens diretamente em~\url{https://raw.githubusercontent.com/ttm/ocd/master/imgs/OCD_.png} e~\url{https://raw.githubusercontent.com/ttm/ocd/master/imgs/OCD_2.png}.}\label{fig:ocdg}
 \end{figure}
 
+\section{Revisão da triplificação do Participa.br}
+O script de triplificação disponibilizado no produto 2 foi adaptado para o paradigma explicitado no Apêndice~\ref{ap:opa}. A escrita do script foi um pouco mais elaborada e limpa. Além disso,
+foram acrescentadas à triplificação algumas informações adicionais de usuários e das postagens em si:
+\begin{itemize}
+    \item Cidade, estado, país, declarados pelo participante.
+    \item Atividade profissional, declarada pelo participante.
+    \item Organização, declarada pelo participante.
+    \item Votos negativos e positivos, em comentários e artigos, de membros específicos.
+    \item Tags.
+    \item Taggeamentos, com tag, artigo, data de taggeamento.
+\end{itemize}
+O script de triplificação está em: \url{http://github.com/ttm/opa/triplificaParticipa3.py}. O arquivo XML está em:~\url{http://github.com/ttm/opa/blob/master/participaTriplestore.rdf?raw=true}; Turtle em:~\url{http://github.com/ttm/opa/blob/master/participaTriplestore.ttl?raw=true}. Os dados também estão disponibilizados no endpoint em \url{http://200.144.255.210:8082}, com a URL para queries SparQL: \url{200.144.255.210:8082/participa/query}. Todos os dados triplificados pelo consultor estão acessíveis via derreferenciamento. Por exemplo, acesse: \url{http://200.144.255.210:8081/tpubby/page/opa/Comment\%2324624}.
 
-\section{Revisão da OPa}\label{ap:opa}
-O primeiro produto desta consultoria envolveu o levantamento de uma ontologia para o Participa, batizada de OPa. Isso ocorreu antes de serem triplificados os dados do Participa.br e antes até mesmo do consultor ter acesso a estes dados. Isso foi bastante proveitoso, pois obrigou a equipe do participa a conceber uma ontologia genérica para portais participativos, centrada nos conceitos de participante, portal participativo e mecanismo participativo. Estes módulos estarão preservados e constam como legado intelectual, uma contribuição da equipe do Participa.br na conceituação da participação social online.
+\section{Levantamento de parte da OPa orientada aos dados do Participa.br}\label{ap:opa}
+O primeiro produto desta consultoria envolveu o levantamento de uma ontologia para o Participa, batizada de OPa. Isso ocorreu antes de serem triplificados os dados do Participa.br e antes até mesmo do consultor ter acesso a estes dados. Isso foi bastante proveitoso, pois obrigou a equipe do participa a conceber uma ontologia genérica para portais participativos, centrada nos conceitos de participante, portal participativo e mecanismo participativo, com as inovações de trilhas e etapas participativas. Estes módulos estarão preservados e constam como legado intelectual, uma contribuição da equipe do Participa.br na conceituação da participação social online.
 
 Já depois de feitas estas ontologias do AA e do Cidade Democrática, e depois de ter feito toda a OBS e VBS, atingimos um paradigma apropriado para triplificação dos dados e organização conceitual. Em resumo:
 \begin{itemize}
@@ -304,11 +316,30 @@ Já depois de feitas estas ontologias do AA e do Cidade Democrática, e depois d
     \item Liberação da ontologia com \emph{blueprints} em imagens. Acréscimo das restrições de classe, e axiomas de pripriedade na medida em que houver utilidade para não enrijecer a estrutura.
 \end{itemize}
 
-Neste contexto, além da ontologia disponível no primeiro produto desta consultoria, a OPa conta com as estruturas orientadas aos dados do portal. Este novo módulo está em implementação no momento de entrega deste produto, e poderá ser observado na URL \url{https://github.com/ttm/pnud5/tree/master/opa}.
+Neste contexto, além da ontologia disponível no primeiro produto desta consultoria, a OPa conta com as estruturas orientadas aos dados do portal. Este novo módulo OWL está em XML aqui: \url{https://github.com/ttm/opa/raw/master/OPaDados.owl}; em Turtle aqui: \url{https://github.com/ttm/opa/raw/master/OPaDados.ttl}. O script que levanta a ontologia com base nos dados está aqui: \url{https://github.com/ttm/opa/blob/master/opa.py}. A ontologia está no Webprotege da Stanford, aberta para comentários, aqui:~\url{http://webprotege.stanford.edu/#Edit:projectId=f929d4be-cd75-4d36-98b0-d04629cf3ba6}. As Figuras~\ref{fig:opa1},~\ref{fig:opa2} e~\ref{fig:opa3} são relações da OPa centradas em uma classe, em uma propriedade e no módulo todos.
 
-\section{Revisão da Triplificação do Participa.br}
-O script de triplificação disponibilizado no produto 2 foi adaptado para o paradigma explicitado no Apêndice~\ref{ap:opa}. Além disso,
-foram acrescentadas à triplificação algumas informações adicionais de usuários e das postagens em si. O script de triplificação está sendo revisado e estará em: \url{http://github.com/ttm/pnud5/opa/triplificaParticipaB.py}.
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../../opa/imgs/classes_/Vote.png}
+  \caption{Figura da classe \texttt{opa:Vote}, fruto do método de especificação de ontologias orientado aos dados. Acesse \url{http://purl.org/socialparticipation/opa/Vote} para observar a classe em conexão com dados e estrutura ontológica.}\label{fig:opa1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../../opa/imgs/properties_/publisher.png}
+  \caption{Figura da propriedade \texttt{opa:publisher}, fruto do método de especificação de ontologias orientado aos dados. Acesse \url{http://purl.org/socialparticipation/opa/publisher} para observar a propriedade em conexão com dados e estrutura ontológica.}\label{fig:opa2}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=\textwidth]{../../opa/imgs/participa_.png}
+  \caption{Figura do módulo inteiro da OPa orientada aos dados do portal Participa.br. A URI \url{http://purl.org/socialparticipation/opa/ParticipationPortal} está conectada somente à URI do Participa.br. Em próximos passos da integração, devem constar aqui também o Cidade Democrática, o AA e outras instâncias reconhecidas pela equipe.}\label{fig:opa3}
+\end{figure}
+
+
+
+Toda a OPa está derreferenciada via redirecionamento no \url{http://purl.org/}. Por exemplo, acesse~\url{http://purl.org/socialparticipation/opa/ParticipationTrack} para acessar todas as trilhas de participação.
+
 \newpage
 \section{Ontologia e Vocabulário da Biblioteca Social (OBS e VBS)}
 Por ocasião do levantamento da Biblioteca (digital e semântica de participação) Social, por iniciativa da SNAS/SG-PR, e com esforços de diversos parceiros, o consultor iniciou uma sequência de entrevistas individuais. Um workshop foi feito na SGPR no dia 20/10/2014 para receber contribuições de parceiros diversos. Além das entrevistas individuais e do workshop, foram consideradas documentações de referência produzidas sobre e pelos mecanismos e instancias de participação social. A PNPS foi considerada separadamente, dada a informatividade do decreto. Todo o processo foi permeado de troca de mensagens entre o consultor e equipes do Particpa.br, UnB, IPEA, SNAS e MP.
